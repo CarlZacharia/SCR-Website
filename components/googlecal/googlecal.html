@@ -1,0 +1,147 @@
+   <style>
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+	text-align: center;
+}
+
+
+
+a:hover {
+	text-decoration: none;
+}
+
+section, fotter, header, aside, nav {
+	display: block;
+}
+
+/*-------------------
+	The menu
+--------------------*/
+
+
+p{
+	font-size:14px;
+	font-weight:bold;
+	color:#7d9098;
+    padding:5px 10px;
+
+}
+
+
+
+
+.active {
+        background-color: #7d9098;
+        color: #000;
+    	border-radius:2px 0 0 2px;
+
+}
+
+
+/*-------------------------
+	Authorize-Button
+--------------------------*/
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  border: solid #1f628d 2px;
+  text-decoration: none;
+}
+.btn:hover {
+  text-decoration: none;
+}
+.editbtn {
+	padding: 5px 10px;
+	font-size: 14px;
+	color: darkblue;
+	background-color: orange;
+}
+.editbtn:hover {
+	padding: 5px 10px;
+	font-size: 14px;
+	color: orange;
+	background-color: darkblue;
+}
+.unedited {
+	background-color: #ccc;
+	border: solid black 1px;
+}
+
+   </style>
+ 
+
+                <h1>Calendar</h1>
+                
+                <div id="authorize-div">
+                      <button class="btn" id="authorize-button" ng-click="handleAuthClick(event)" style="color: #FFCC4D;">
+                        Authorize for <br />{{user}}
+                      </button>
+                </div>
+              <br />
+         <div layout="row" >
+              <div flex="50">
+              	<div layout="column">
+				  <label style="display: block;text-align: left; font-size: 20px;">Past Week Appts</label>
+
+				  <div layout="row" ng-repeat="pw in pastweekappts" style="color: black; font-size: .8em; text-align: left;">
+				  	<div flex="10"><button ng-click="editAppt(pw)" class="editbtn">EDIT</button></div>
+				  	<div flex="20">
+				    	 <p>{{pw.appt_date | date : 'EEEE  MMMM dd, yyyy'}}</p>
+				    </div>
+				    <div flex="20">
+				    	<p>{{pw.appt_date | date : 'h:mm a'}} </p>
+				   </div>
+				   <div flex="35">
+				   		<p>{{pw.summary}}</p>
+					</div>
+					<div flex="15"  ng-class="{'unedited': pw.meetingtype == null}" style="padding-top: 5px; background-color: white; border: solid black 1px;">{{pw.meetingtype}}</div>
+				</div>
+					<md-divider></md-divider>
+			  </div>
+			</div>
+
+
+	<div flex="50">
+              	<div layout="column">
+				  <label style="display: block;text-align: left; font-size: 20px;">This Week Appts</label>
+
+				  <div layout="row" ng-repeat="tw in thisweekappts" style="color: black; font-size: .8em; text-align: left;">
+				  	<div flex="10"><button ng-click="editAppt(tw)" class="editbtn">EDIT</button></div>				  	
+				  	<div flex="20">
+				    	 <p>{{tw.appt_date | date : 'EEEE  MMMM dd, yyyy'}}</p>
+				    </div>
+				    <div flex="20">
+				    	<p>{{tw.appt_date | date : 'h:mm a'}} </p>
+				   </div>
+				   <div flex="35">
+				   <p>{{tw.summary}}</p>
+					</div>
+					<div flex="15"  ng-class="{'unedited': pw.meetingtype == null}" style="padding-top: 5px; background-color: white; border: solid black 1px;">{{pw.meetingtype}}</div>					
+				</div>
+					<md-divider></md-divider>
+			  </div>
+		</div>
+
+
+    </div>
+    
+
+        <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>

@@ -1,0 +1,176 @@
+<style>
+.caseslist {
+	width: 20%;
+	text-decoration: none;
+	background-color: #eee;
+	color: darkblue;
+	float: left;
+}
+.casemain {
+	width: 80%;
+	min-height: 200px;
+
+	color: darkblue;
+	float: left;
+}
+.tdr {
+	font-weight: bold;
+	text-align: right;
+}
+.tdc {
+	font-weight: bold;
+	text-align: center;
+}
+label {
+	display: block;
+	float: left;
+width: 10em;
+margin-right: 1em;
+}
+</style>
+
+<div class="caseslist">
+
+<h1>Cases Main ({{cases.length}})</h1>
+
+<md-list-item class="md-3-line" ng-repeat="x in cases track by $index" ng-click="showcase(x)" style="padding: 3px;">
+	<div class="md-list-item-text" layout="column">
+	<h3> {{x.lname}} {{ x.fname }}  </h3>
+	<small><b>{{x.casetype}} </small>
+	<small>{{x.office}} ||  Fee: {{x.fee}} </small>
+</div>
+<md-divider></md-divider>
+</md-list-item>
+</div>
+
+
+
+<br />
+<div layout="row">
+<div layout="column" flex="50" style="border: black solid 2px; background-color: wheat;margin-right: 10px; padding-left: 15px;">
+	<div flex>
+		<h3>CONTACT</h3>
+	<md-input-container layout-fill>
+  		<label>Contact First name</label>
+  		<input type="text" ng-model="case.cfname">
+	</md-input-container>
+	</div>
+
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>Contact Last name</label>
+	  	<input type="text" ng-model="case.clname">
+		</md-input-container>
+	</div>
+
+  <div flex>
+	<md-input-container layout-fill>
+  		<label>Address</label>
+  		<input type="text" ng-model="case.caddress">
+	</md-input-container>
+</div>
+
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>City State Zip</label>
+	  	<input type="text" ng-model="case.ccsz">
+		</md-input-container>
+	</div>
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>Telephone</label>
+	  	<input type="text" ng-model="case.telephone">
+		</md-input-container>
+	</div>
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>E-Mail</label>
+	  	<input type="text" ng-model="case.email">
+		</md-input-container>
+	</div>		
+	
+</div>
+
+<div layout="column" flex="50" style="border: solid black 2px;  margin-right: 10px; padding-left: 15px;">
+	<div flex>
+		<h3>CLIENT</h3>
+	<md-input-container layout-fill>
+  		<label>Client First name</label>
+  		<input type="text" ng-model="case.fname">
+	</md-input-container>
+	</div>
+
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>Client Last name</label>
+	  	<input type="text" ng-model="case.lname">
+		</md-input-container>
+	</div>
+
+  <div flex>
+	<md-input-container layout-fill>
+  		<label>Address</label>
+  		<input type="text" ng-model="case.address">
+	</md-input-container>
+</div>
+
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>City State Zip</label>
+	  	<input type="text" ng-model="case.csz">
+		</md-input-container>
+	</div>
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>Case Type</label>
+	  	<input type="text" ng-model="case.casetype">
+		</md-input-container>
+	</div>
+  	<div flex>
+		<md-input-container layout-fill>
+	  	<label>Office</label>
+	  	<input type="text" ng-model="case.office">
+		</md-input-container>
+	</div>	
+</div>
+</div>
+
+
+<br />
+<div layout="row">
+<div layout="column" flex="50" style="border: black solid 2px; background-color: wheat;margin-right: 10px; padding-left: 15px;">
+	  	<div flex>
+	  		<h3> Case Notes</h3>
+		<md-input-container layout-fill >
+
+	  	<textarea type="text" ng-model="case.postmtgnotes" style="width:90%;"></textarea>
+		</md-input-container>
+	</div>	
+</div>
+
+<div layout="column" flex="50"  style="background-color:#e0e0eb; border: solid black 2px; margin-right: 10px; padding-left: 15px;">
+	    <div layout-gt-sm="row">
+	 <md-input-container class="md-block" flex-gt-sm flex="30">
+        <label>First NAme</label>
+        <input ng-model="case.cfname">
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm flex="5">
+        <label>MI</label>
+        <input ng-model="case.cmi">
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm flex="50">
+        <label>Last Name</label>
+        <input ng-model="case.clname">
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm flex="15">
+        <label>Ext</label>
+        <input ng-model="case.cext">
+      </md-input-container>      
+</div>	
+</div>
+
+
+	
+
+
+

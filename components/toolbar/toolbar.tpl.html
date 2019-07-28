@@ -1,0 +1,82 @@
+<md-toolbar>
+	<div class="md-toolbar-tools">
+
+
+			<img src="images/zblogo.jpg" style="max-width: 100px; height: auto;"></img>
+
+
+			<span flex></span>
+
+
+			<md-button
+				aria-label="ZB Cases"
+				ui-sref="zbcases"
+				ng-if="isAuthenticated">
+				ZB Cases
+			</md-button>
+			<md-button
+				aria-label="Doc Gen"
+				ui-sref="docgen"
+				ng-if="isAuthenticated">
+				DocGen
+			</md-button>
+			<md-button
+				aria-label="SNFs"
+				ui-sref="maps"
+				ng-if="isAuthenticated">
+				SNFs
+			</md-button>			
+			<md-button
+				aria-label="Calendar"
+				ui-sref="cal"
+				ng-if="isAuthenticated">
+				Calendar
+			</md-button>
+			<md-button
+				aria-label="Authorities"
+				ui-sref="auths"
+				ng-if="isAuthenticated">
+				Authorities
+			</md-button>
+			
+			<md-button
+				aria-label="SCR Cases"
+				ui-sref="scrcases"
+				ng-if="isAuthenticated">
+				SCR Cases
+			</md-button>
+
+			<md-button
+				aria-label="QuickCalcs"
+				ui-sref="qc"
+				ng-if="isAuthenticated">
+				QuickCalcs
+			</md-button>
+
+			<md-button
+				aria-label="MA Nos."
+				ui-sref="manos"
+				ng-if="isAuthenticated">
+				Calcs
+			</md-button>	
+			<md-button
+				aria-label="Main"
+				ui-sref="Main"				
+				ng-if="isAuthenticated">
+			Main
+			</md-button>					
+			<md-button
+				aria-label="Logout"
+				ng-click="logout()"
+				ng-if="isAuthenticated">
+			Logout
+			</md-button>
+
+	</div>
+
+</md-toolbar>
+<div class="line2" style="height: 27px; background-color: #eee;border-bottom: 2px solid;">
+	<span>
+		<small>Today's Date: {{today}}</small>
+	</span>
+</div>

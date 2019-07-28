@@ -1,0 +1,935 @@
+<style>
+
+input[type=text]{
+  background-color: #fff;
+  border: black solid .5px;
+  width: 100%;
+  padding: 4px;
+}
+  .select_join {
+   
+width: 100%;
+   height: 28px;
+   overflow: hidden;
+  border: black solid .5px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+-webkit-box-shadow: inset 0px 0px 10px 1px #FEFEFE;
+box-shadow: inset 0px 0px 10px 1px #FEFEFE;
+   }
+.select_join select {
+  
+   background: transparent;
+   width: 100%;
+   font-size:12pt;
+   color:grey;
+   border: 0;
+   border-radius: 0;
+   height: 28px;
+   -webkit-appearance: none;
+   
+   }
+   .select_join select:focus {
+    outline: none;
+
+}
+</style>
+
+<div class="md-padding" ng-cloak>
+<div>
+
+
+<md-tabs md-dynamic-height md-border-bottomc md-selected="selectedTab" style="padding: 10px;" class="md-raised"  md-border-bottom md-autoselect>
+  <md-tab label="Cases" ng-click="clearnewcases()">
+    <div layout="row" style="padding: 20px;">
+      <div layout="column" flex style="margin: -15px 10px; border: black solid 2px; padding: 5px; min-height: 400px; background-color: #BCD2C7;">
+        <span style="padding: 10px; margin-top: 20PX;"><label>Find a Case</label>  <input style="padding: 6px 10px 6px 10px; width:90%;" type="text" autofocus ng-model="findcase" ng-change="findzbcase()" ng-click="clearnewcases()"></span>
+        <div flex>
+          <ul ng-repeat="z in zbcases track by $index" style="list-style-type: none;">
+            <li>
+            <div layout="column">
+              <a href="" ng-click="getzbcase(z)">
+                <div flex>{{z.fname}} {{z.lname}}</div>
+                <div flex>{{z.cfname}} {{z.clname}}</div></a>
+                <div flex>{{z.casetype}}</div>
+                <div flex>{{z.casestatus}}</div>
+            </div>
+            </li>
+          </ul>
+        </div>    
+      </div>
+
+
+  <div layout="column" flex style="margin: -15px 10px; background-color: darkblue; border: black solid 2px; padding: 5px; width: 100%; min-height: 400px;">
+    <h3 align="center" style="color: white;">Prospects ({{prospectcasescount}})</h3>
+    <div layout="row" ng-repeat="pc in prospectcases track by $index">
+
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.casetype}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
+  
+  <div layout="column" flex style="margin: -15px 10px; border: black solid 2px; padding: 5px; width: 100%; min-height: 400px; background-color: darkgreen;">
+    <h3 align="center" style="color: white;">Probate ({{probatecasescount}})</h3>
+    <div layout="row" ng-repeat="pc in probatecases track by $index">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>   
+            <label style="display: block;text-align: center;">{{pc.current_status}}                             
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
+
+  <div layout="column" flex style="margin: -15px 10px; border: black solid 2px; padding: 5px; width: 100%; min-height: 400px; background-color: brown;">
+    <h3 align="center" style="color: white;">MA Cases</h3>
+
+  <h4 style="color: white;">New Not Filed - Single({{elscasescount}})</h4>
+    <div layout="row" ng-repeat="pc in elscases | filter:isLevel1">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+
+  </div>
+  <div >
+    <h4>New Not Filed - Married ({{elmcasescount}})</h4>
+      <div layout="row" ng-repeat="pc in elmcases | filter:isLevel1">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+      </div>
+  </div>
+
+
+<div >
+  <h4>Recently Filed - Single({{elscasescount}})</h4>
+    <div ng-repeat="pc in elscases | filter:isLevel2">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+</div>
+    <div >
+      <h4>Recently Filed - Married ({{elmcasescount}})</h4>
+        <div layout="row" ng-repeat="pc in elmcases | filter:isLevel2">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div >
+      <h4>Pending Status - Single({{elscasescount}})</h4>
+        <div ng-repeat="pc in elscases | filter:isLevel3">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div >
+      <h4>Pending Status - Married ({{elmcasescount}})</h4>
+        <div layout="row" ng-repeat="pc in elmcases | filter:isLevel3">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div >
+      <h4>Withdrawn - Single({{elscasescount}})</h4>
+        <div ng-repeat="pc in elscases | filter:isLevel4">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div>
+      <h4>Withdrawn - Married({{elcasescount}})</h4>
+        <div ng-repeat="pc in elmcases | filter:isLevel4">
+      <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>          
+    <div >
+      <h4>Rejected - Single({{elscasescount}})</h4>
+        <div ng-repeat="pc in elscases | filter:isLevel5">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div >
+      <h4>Rejected - Married({{elmcasescount}})</h4>
+        <div ng-repeat="pc in elmcases | filter:isLevel5">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>          
+    <div >
+      <h4>Penalty - Single({{elscasescount}})</h4>
+        <div ng-repeat="pc in elscases | filter:isLevel6">
+            <a href="" ng-model="ec" ng-click="getzbcase(ec)">{{ec.cfname}} {{ec.clname}} | {{ec.fname}}  {{ec.lname}} </a>
+        </div>
+    </div>
+    <div >
+      <h4>Penalty - Married({{elmcasescount}})</h4>
+        <div ng-repeat="pc in elmcases | filter:isLevel6">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>                                        
+    <div >
+      <h4>On Appeal - Single({{elscasescount}})</h4>
+        <div ng-repeat="pc in elscases | filter:isLevel7">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div >
+      <h4>On Appeal - Married ({{elmcasescount}})</h4>
+        <div layout="row" ng-repeat="pc in elmcases | filter:isLevel7">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div >
+      <h4>Approved - Single({{elscasescount}})</h4>
+        <div ng-repeat="pc in elscases | filter:isLevel8">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+    <div >
+      <h4>Approved - Married ({{elmcasescount}})</h4>
+        <div layout="row" ng-repeat="pc in elmcases | filter:isLevel8">
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.current_status}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+        </div>
+    </div>
+  </div>
+
+
+  <div layout="column" flex style="margin: -15px 10px; background-color: darkorange; border: black solid 2px; padding: 5px; width: 100%; min-height: 400px;">
+    <h3 align="center" style="color: white;">Estate Plan Cases ({{epcasescount}})</h3>
+    <div layout="row" ng-repeat="pc in epcases track by $index">
+
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch style="width: 100%;">
+        <md-card-title>
+          <md-card-title-text>
+            <span style="font-size: 14px;"><a href="" ng-model="pc" ng-click="getzbcase(pc)">Contact: {{pc.cfname}} {{pc.clname}} <br />Client: {{pc.fname}}  {{pc.lname}} </a></span>
+            <label style="display: block;text-align: center;">{{pc.casetype}}</label>            
+            <span class="md-subhead">Next Action</span>
+            <div><input ng-model="pc.next_action" ng-blur="updnextaction('next_action', pc.next_action, pc.caseid)" style="width: 100%; color: #FF014A; background-color: lightblue;"></div>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
+
+      
+
+    </div>
+  </md-tab>
+
+
+
+
+
+  <md-tab label="Case Main" ng-if="zbcase">
+
+    <div layout="row">
+<!--  INSERT HERE    -->
+<div layout="column" flex="25" style="margin: 10px auto; border: black solid 2px; padding: 5px; min-height: 400px;background-color: #FAEAAF">
+  <h3 align="center">Primary Contact</h3>
+  <div layout="row">
+  <div style="line-height: 24px; margin: 8px;">
+    <label>First Name</label>
+    <input type="text" ng-model="zbcase.cfname" ng-blur="updcasedata('cfname', zbcase.cfname, zbcase.caseid)">
+  </div>
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Last Name</label>
+    <input type="text" ng-model="zbcase.clname"  ng-blur="updcasedata('clname', zbcase.clname, zbcase.caseid)">
+  </div>
+  </div>
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Address</label>
+    <input type="text" ng-model="zbcase.caddress" ng-blur="updcasedata('caddress', zbcase.caddress, zbcase.caseid)">
+  </div>
+  <div style="line-height: 24px; margin: 8px;">
+    <label>City State Zip</label>
+    <input type="text" ng-model="zbcase.ccsz" ng-blur="updcasedata('ccsz', zbcase.ccsz, zbcase.caseid)">
+  </div>
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Telephone</label>
+    <input type="text" ng-model="zbcase.telephone" ng-blur="updcasedata('telephone', zbcase.telephone, zbcase.caseid)">
+  </div>
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Email</label>
+    <input type="text" ng-model="zbcase.email"  ng-blur="updcasedata('email', zbcase.email, zbcase.caseid)">
+  </div>
+
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Relation to Client [Client is Contact <input type="checkbox" ng-change="clientisselfedit()" ng-model="zbcase.clientself">]</label>
+    <input type="text" ng-model="zbcase.relation"  ng-blur="updcasedata('relation', zbcase.relation, zbcase.caseid)">
+  </div>
+
+
+  <div layout="row" >
+    <div style="line-height: 24px; margin: 8px;"  flex="50">
+      <label>Attorney</label>       
+      <select class="select_join" ng-model="zbcase.atty" md-selected-text="zbcase.atty" style="background-color: #fff; margin: 8px 3px;" ng-change="updcasedata('atty', zbcase.atty, zbcase.caseid)" md-ink-ripple >
+        <option ng-value="item" ng-repeat="item in attys" style="background-color: #fff; margin: 8px 3px;" >{{item}}</option>
+      </select>
+    </div>
+
+    <div style="line-height: 24px; margin: 8px;"  flex="50">
+      <label>Attorney 2</label>       
+      <select class="select_join" ng-model="zbcase.atty2" md-selected-text="zbcase.atty2" style="background-color: #fff; margin: 8px 3px;" ng-change="updcasedata('atty2', zbcase.atty2, zbcase.caseid)" md-ink-ripple >
+        <option ng-value="item" ng-repeat="item in attys">{{item}}</option>
+      </select>
+    </div>
+  </div>
+  
+  <div layout="row">
+        <div style="line-height: 24px; margin: 8px;"  flex="50">
+      <label>Case Mgr.</label>       
+      <select class="select_join" ng-model="zbcase.caseworker" md-selected-text="zbcase.caseworker" style="background-color: #fff; margin: 8px 3px;" ng-change="updcasedata('caseworker', zbcase.caseworker, zbcase.caseid)" md-ink-ripple>
+        <option ng-value="asst" ng-repeat="asst in assts">{{asst}}</option>
+      </select>
+    </div>
+        <div style="line-height: 24px; margin: 8px;"  flex="50"> 
+      <label style="margin-top: 8px;">Office</label>        
+      <select class="select_join" ng-model="zbcase.office" md-selected-text="zbcase.office" style="background-color: #fff; margin: 8px 3px;"  ng-change="updcasedata('office', zbcase.office, zbcase.caseid)" >
+            <option ng-value="item" ng-repeat="item in offices">{{item}}</option>
+      </select>
+    </div>
+</div>
+
+
+    <div style="line-height: 24px; margin: 8px;">   
+      <label align="left" style="padding: 9px; font-weight: bolder;">Contact Notes</label>
+        <textarea style="width: 95%; height: 150px; margin: auto;" ng-model="zbcase.contactnotes" ng-blur="updcasedata('contactnotes', zbcase.contactnotes, zbcase.caseid)"></textarea>
+      </div>
+
+        <div style="line-height: 24px; margin: 8px;">
+          <label>Referred By</label>
+          <input type="text" ng-model="zbcase.referredby" ng-blur="updcasedata('referredby', zbcase.referredby, zbcase.caseid)">
+        </div>
+
+    <div layout="row">
+     <div >Date Created</div>
+     <div style="margin-left: 10px;">{{zbcase.datecreated | date : format : 'medium'}}</div>
+    </div>              
+</div>
+
+
+      <div layout="column" flex="25" style="margin: 10px auto; border: black solid 2px; padding: 5px; width: 50%; min-height: 400px;background-color: #FAEAAF">
+        <h3 align="center">Client</h3>
+        <div style="line-height: 24px; margin: 8px;">
+          <label >Case Type</label>
+          <select class="select_join" ng-model="zbcase.casetype" md-selected-text="zbcase.casetype" ng-change="updcasedata('casetype', zbcase.casetype, zbcase.caseid)" style="background-color: #fff;">
+              <option ng-value="item" ng-repeat="item in casetypes" style="font-weight: bold;background-color: lightblue;">{{item}}</option>
+          </select>
+        </div>
+
+
+        <div layout="row">
+        <div style="line-height: 24px; margin: 8px;">
+
+
+<label>
+        <span ng-if="zbcase.casetype == 'Elder Law Married Application'">IS </span>
+        <span ng-if="zbcase.casetype == 'Elder Law Single Application'">SNF Resident  </span>
+        <span ng-if="zbcase.casetype == 'Probate Pennsylvania'">Executor  </span>
+        <span ng-if="zbcase.casetype == 'Probate Florida'">Executor </span>        
+          First Name</label>
+ 
+        <input type="text" ng-model="zbcase.fname"  ng-blur="updcasedata('fname', zbcase.fname, zbcase.caseid)">
+        </div>
+        <div style="line-height: 24px; margin: 8px;">
+<label>
+        <span ng-if="zbcase.casetype == 'Elder Law Married Application'">IS </span>
+        <span ng-if="zbcase.casetype == 'Elder Law Single Application'">SNF Resident  </span>
+        <span ng-if="zbcase.casetype == 'Probate Pennsylvania'">Executor  </span>
+        <span ng-if="zbcase.casetype == 'Probate Florida'">Executor </span>        
+          Last Name</label>          
+          <input type="text" ng-model="zbcase.lname" ng-blur="updcasedata('lname', zbcase.lname, zbcase.caseid)">
+        </div>
+        </div>
+<div layout="row" ng-if="zbcase.casetype == 'Elder Law Married Application' || zbcase.casetype == 'Elder Law Single Application'">
+    <div   style="line-height: 24px; margin: 8px;" >
+      <label>IS DOB</label>
+      <input type="date" ng-model="zbcase.isdob" style="background-color: #fff;"  ng-change="calcisage()" ng-blur="updcasedata('isdob', zbcase.isdob, zbcase.caseid);updcasedata('isage', zbcase.isage, zbcase.caseid)">
+    </div>
+    <div   style="line-height: 24px; margin: 8px;">
+      <label>IS Age</label>
+      <input type="number" ng-model="zbcase.isage" style="background-color: #fff; width: 70px;"  ng-change="updcasedata('isage', zbcase.isage, zbcase.caseid)">
+    </div>
+  </div>
+
+<div style="display: block;line-height: 24px; margin: 8px;" ng-if="zbcase.casetype == 'Elder Law Married Application' || zbcase.casetype == 'Elder Law Single Application'">
+   <label style="display: block; margin-top: 10px; " >IS Sex</label>
+<md-radio-group ng-model="zbcase.issex" layout="row">
+  <md-radio-button name="issex" ng-model="zbcase.issex" value="Male"  ng-click="updcasedata('issex', 'Male', zbcase.caseid)" >Male</md-radio-button> 
+  <md-radio-button name="issex" ng-model="zbcase.issex" value="Female" ng-click="updcasedata('issex', 'Female', zbcase.caseid)" >Female</md-radio-button>
+</md-radio-group>
+</div>
+
+
+<div ng-if="zbcase.casetype == 'Elder Law Married Application'">
+        <div layout="row">
+          <div style="line-height: 24px; margin: 8px;">
+            <label>CS First Name</label>
+            <input type="text" ng-model="zbcase.csfname"  ng-blur="updcasedata('csfname', zbcase.csfname, zbcase.caseid)">
+          </div>
+          <div style="line-height: 24px; margin: 8px;">
+            <label>CS Last Name</label>
+            <input type="text" ng-model="zbcase.cslname" ng-blur="updcasedata('cslname', zbcase.cslname, zbcase.caseid)">
+          </div>
+        </div>
+<div layout="row" ng-if="zbcase.casetype == 'Elder Law Married Application' || zbcase.casetype == 'Elder Law Single Application'">
+    <div   style="line-height: 24px; margin: 8px;" >
+      <label>CS DOB</label>
+      <input type="date" ng-model="zbcase.csdob" style="background-color: #fff;" ng-change="calccsage()" ng-blur="updcasedata('csdob', zbcase.csdob, zbcase.caseid);updcasedata('csage', zbcase.csage, zbcase.caseid)">
+    </div>
+    <div   style="line-height: 24px; margin: 8px;">
+      <label>CS Age</label>
+      <input type="number" ng-model="zbcase.csage" style="background-color: #fff; width: 70px;" ng-change="updcasedata('csage', zbcase.csage, zbcase.caseid)">
+    </div>
+  </div>  
+
+<div style="display: block;line-height: 24px; margin: 8px;" ng-if="zbcase.casetype == 'Elder Law Married Application' || zbcase.casetype == 'Elder Law Single Application'">
+   <label style="display: block; margin-top: 10px; ">CS Sex</label>
+<md-radio-group ng-model="zbcase.cssex" layout="row" >
+  <md-radio-button name="cssex" ng-model="zbcase.cssex" value="Male"   ng-click="updcasedata('cssex', 'Male', zbcase.caseid)" >Male</md-radio-button> 
+  <md-radio-button name="cssex" ng-model="zbcase.cssex" value="Female"  ng-click="updcasedata('cssex', 'Female', zbcase.caseid)" >Female</md-radio-button>
+</md-radio-group>
+</div>
+
+        <div   style="line-height: 24px; margin: 8px;" ng-if="zbcase.casetype == 'Elder Law Married Application'">
+          <label>CS Address</label>
+          <input type="text" ng-model="zbnewcase.csaddress" style="background-color: #fff;" ng-change="updcasedata('csaddress', zbcase.csaddress, zbcase.caseid)">
+        </div>
+
+        <div   style="line-height: 24px; margin: 8px;" ng-if="zbcase.casetype == 'Elder Law Married Application'">
+          <label>CS City State Zip</label>
+          <input type="text" ng-model="zbnewcase.cscsz" style="background-color: #fff;" ng-change="updcasedata('cscsz', zbcase.cscsz, zbcase.caseid)">
+        </div>
+</div>
+
+
+        <div   style="line-height: 24px; margin: 8px;"  ng-if="zbcase.casetype=='Elder Law Married Application' || zbcase.casetype == 'Elder Law Single Application'">
+          <label ng-if="zbcase.facility">Facility</label>
+          <input type="text" ng-model="zbcase.facility"  ng-blur="updcasedata('facility', zbcase.facility, zbcase.caseid)" ng-if="zbcase.facility" style="background-color: #fff;">
+          <a href="" class="md-raised md-primary" ng-click="findasnf()" ng-if="!zbcase.facility">Find SNF</a>
+          <label  ng-if="zbcase.facility">Admission Date</label>
+          <input type="date" ng-model="zbcase.facilityadmitdate" style="background-color: #fff;"  ng-blur="updcasedata('facilityadmitdate', zbcase.facilityadmitdate, zbcase.caseid); updcasedata('facility', zbcase.facility, zbcase.caseid)"  ng-if="zbcase.facility">
+        </div>
+  
+
+
+          
+        <div style="line-height: 24px; margin: 8px;">
+          <label>Address</label>
+          <input type="text" ng-model="zbcase.address" ng-blur="updcasedata('address', zbcase.address, zbcase.caseid)">
+        </div>
+        <div   style="line-height: 24px; margin: 8px;" >
+          <label>City State Zip</label>
+          <input type="text" ng-model="zbcase.csz" ng-blur="updcasedata('csz', zbcase.csz, zbcase.caseid)">
+        </div>
+
+
+        <div style="line-height: 24px; margin: 8px;">
+          <label>Case Status</label>
+              <select class="select_join" ng-model="zbcase.casestatus" md-selected-text="zbcase.casestatus" ng-change="updcasedata('casestatus', zbcase.casestatus, zbcase.caseid)" style="background-color: #fff;">
+                  <option ng-value="item" ng-repeat="item in statuses">{{item}}</option>
+              </select>
+            </div>
+
+
+        <div style="line-height: 24px; margin: 8px;">
+          <label>Fee</label>
+          <input type="text" ng-model="zbcase.fee" ng-blur="updcasedata('fee', zbcase.fee, zbcase.caseid)">
+        </div>          
+        <div   style="line-height: 28px; margin: 2px;"   >
+          <div layout="row">
+           <div >Last Updated</div>
+           <div style="margin-left: 10px;">{{zbcase.datemodified | date : format : 'medium'}}</div>
+          </div>
+        </div>
+
+      </div>    
+
+    <div layout="column" flex="25" style="margin: 10px auto; border: black solid 2px; padding: 5px; width: 50%; min-height: 400px;background-color: #FAEAAF">
+            <label align="left" style="padding: 9px; font-weight: bolder;">Appt. Call Notes</label>
+              <textarea style="width: 95%; height: 24%; margin: auto;"  ng-model="zbcase.apptnotes" ng-blur="updcasedata('apptnotes', zbcase.apptnotes, zbcase.caseid)" readonly></textarea>      
+            <label align="left" style="padding: 9px; font-weight: bolder;">First Mtg Notes</label>
+              <textarea style="width: 95%; height: 24%; margin: auto;" ng-model="zbcase.postmtgnotes" ng-blur="updcasedata('postmtgnotes', zbcase.postmtgnotes, zbcase.caseid)"></textarea>
+
+            <label align="left" style="padding: 9px; font-weight: bolder;">Plan</label>
+              <textarea style="width: 95%; height: 24%; margin: auto;"  ng-model="zbcase.plan" ng-blur="updcasedata('plan', zbcase.plan, zbcase.caseid)"></textarea>      
+            <label align="left" style="padding: 9px; font-weight: bolder;">Issues</label>
+              <textarea style="width: 95%; height: 24%; margin: auto;" ng-model="zbcase.issues" ng-blur="updcasedata('issues', zbcase.issues, zbcase.caseid)"></textarea>
+    </div>
+    <div layout="column" flex="25" style="margin: 10px auto; border: black solid 2px; padding: 5px; width: 50%; min-height: 400px;background-color: #FAEAAF">
+  <div class="todos">
+    <label style="display: block;">Next Action</label>
+    <input type="text" ng-model="zbcase.next_action" style="width: 95%; background-color: lightblue;margin-bottom: 20px;"  ng-blur="updcasedata('next_action', zbcase.next_action, zbcase.caseid)">
+  </div>      
+      <div layout="row">
+      <h4>CASE NOTES</h4>
+      <md-button ng-click="addnewnote()" class="md-primary md-raised" style="margin-left: 50px;">Add New Note</md-button>
+    </div>
+      <div layout="column">
+        <div ng-if="showaddnew">
+          <textarea style="width: 95%; height: 100px; margin: auto;" ng-model="addnewnotedata" ng-blur="addnotedata('actdesc', addnewnotedata)"></textarea>
+        </div>
+        <div  ng-repeat="action in actions track by $index">
+          <label align="left" style="padding: 9px; font-weight: bolder;">{{action.datecreated | date: format: 'long'}}</label>
+                  <textarea style="width: 95%; height: 100px; margin: auto;" ng-model="action.actdesc" ng-blur="updactdata(action.actdesc, action.id)"></textarea>
+                </div>
+      </div>
+    </div>
+
+    </div>
+
+  </md-tab>
+
+
+
+
+
+
+
+
+<!--NEW CASE-->
+
+<md-tab label="ADD NEW CASE" md-on-select="clearnewcase()" data-ng-if="!zbcase">
+<div layout="row">
+
+  <div layout="column" flex="30" style="margin: 10px auto; border: black solid 2px; padding: 5px; height: 900px;background-color: #FAEAAF">
+    <h3 align="center">Primary Contact</h3>
+
+      <div layout="row" style="margin-bottom: 8px;">      
+        <div style="line-height: 24px; margin: 8px;">
+            <label>First Name</label>
+            <input type="text" ng-model="zbnewcase.cfname">
+        </div>
+        <div style="line-height: 24px; margin: 8px;">
+          <label>Last Name</label>
+          <input type="text" ng-model="zbnewcase.clname">
+        </div>
+      </div>
+      <div style="line-height: 24px; margin: 8px;">
+        <label>Address</label>
+        <input type="text" ng-model="zbnewcase.caddress">
+      </div>
+      <div style="line-height: 24px; margin: 8px;">
+        <label>City State Zip</label>
+        <input type="text" ng-model="zbnewcase.ccsz">
+      </div>
+      <div style="line-height: 24px; margin: 8px;">
+        <label>Telephone</label>
+        <input type="text" ng-model="zbnewcase.telephone">
+      </div>
+      <div style="line-height: 24px; margin: 8px;">
+        <label>Email</label>
+        <input type="text" ng-model="zbnewcase.email" >
+      </div>
+
+      <div style="line-height: 24px; margin: 8px;">
+        <label>Relation to Client [Client is Contact <input type="checkbox" ng-change="clientisself()" ng-model="clientself">]</label>
+        <input type="text" ng-model="zbnewcase.relation" >
+      </div>
+    <div layout="row" style="padding-left:  10px;">
+      <div   style="line-height: 24px; margin: 8px; "  flex="50">
+        <label>Attorney</label>
+        <select class="select_join" ng-model="zbnewcase.atty" md-selected-text="zbnewcase.atty" style="background-color: #fff; ">
+            <option ng-value="item" ng-repeat="item in attys">{{item}}</option>
+        </select>
+      </div>
+
+      <div style="line-height: 24px; margin: 8px;" flex="50">
+        <label>Attorney 2</label>       
+        <select class="select_join" ng-model="zbnewcase.atty2" md-selected-text="zbnewcase.atty2" style="background-color: #fff; " >
+              <option ng-value="item" ng-repeat="item in attys">{{item}}</option>
+        </select>
+      </div>
+    </div>
+      <div layout="row" style="padding-left:  10px;">
+        <div style="line-height: 24px; margin: 4px;" flex="50">
+          <label>Case Mgr.</label>       
+         <select class="select_join" ng-model="zbnewcase.caseworker" md-selected-text="zbnewcase.caseworker" style="background-color: #fff; ">
+            <option ng-value="asst" ng-repeat="asst in assts">{{asst}}</option>
+        </select>
+        </div>
+        <div style="line-height: 24px; margin: 4px; " flex="50"> 
+            <label style="margin-top: 8px;">Office</label>        
+            <select class="select_join" ng-model="zbnewcase.office" md-selected-text="zbnewcase.office" style="background-color: #fff; " >
+                <option ng-value="item" ng-repeat="item in offices">{{item}}</option>
+            </select>
+        </div>
+      </div>
+
+      <div style="line-height: 24px; margin: 8px;">   
+        <label align="left" style="padding: 9px; font-weight: bolder;">Contact Notes</label>
+        <textarea style="width: 95%; height: 150px; margin: auto;" ng-model="zbnewcase.contactnotes"></textarea>
+      </div>
+     
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Referred By</label>
+      <input type="text" ng-model="zbnewcase.referredby">
+  </div>
+
+
+  </div><!--End of PRimary Contact Column-->
+
+<div layout="column" flex="30" style="margin: 10px auto; border: black solid 2px; padding: 5px; width: 50%; min-height: 400px;background-color: #FAEAAF">
+  <h3 align="center">Client</h3>
+  <div layout="row">
+    <div style="line-height: 24px; margin: 8px;">
+      <label>First Name</label>
+      <input type="text" ng-model="zbnewcase.fname" >
+    </div>
+    <div style="line-height: 24px; margin: 8px;">
+      <label>Last Name</label>
+        <input type="text" ng-model="zbnewcase.lname">
+    </div>
+  </div>
+
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Address</label>
+    <input type="text" ng-model="zbnewcase.address">
+  </div>
+  <div   style="line-height: 24px; margin: 8px;" >
+    <label>City State Zip</label>
+    <input type="text" ng-model="zbnewcase.csz">
+  </div>
+  <div layout="column" style="margin-bottom: 12px;" >
+    <div style="line-height: 24px; margin: 8px; " >
+      <label>Case Status</label>
+        <select class="select_join" ng-model="zbnewcase.casestatus" md-selected-text="zbnewcase.casestatus"  style="background-color: #fff;">
+            <option ng-value="item" ng-model="zbnewcase.casestatus" ng-repeat="item in statuses">{{item}}</option>
+        </select>
+    </div>
+    <div style="line-height: 24px; margin: 8px;" >
+      <label>Case Type</label>
+        <select class="select_join" ng-model="zbnewcase.casetype" md-selected-text="zbnewcase.casetype" style="background-color: #fff;" >
+            <option ng-value="item" ng-model="zbnewcase.casetype" ng-repeat="item in casetypes" style="font-weight: bold;">{{item}}</option>
+        </select>
+    </div>    
+  </div>
+<div>
+<div layout="row" ng-if="zbnewcase.casetype == 'Elder Law Married Application' || zbnewcase.casetype == 'Elder Law Single Application'">
+    <div   style="line-height: 24px; margin: 8px;" >
+      <label>IS DOB</label>
+      <input type="date" ng-model="zbnewcase.isdob" style="background-color: #fff;"  ng-change="calcisagenew()">
+    </div>
+    <div   style="line-height: 24px; margin: 8px;">
+      <label>IS Age</label>
+      <input type="number" ng-model="zbnewcase.isage" style="background-color: #fff; width: 70px;">
+    </div>
+  </div>
+
+
+<div style="display: block; line-height: 24px; margin: 8px; ">
+ <label style="display: block; ">IS Sex</label>  
+<md-radio-group ng-model="zbnewcase.issex" layout="row">
+  <md-radio-button name="issex" ng-model="zbnewcase.issex" value="Male"  >Male</md-radio-button> 
+  <md-radio-button name="issex" ng-model="zbnewcase.issex" value="Female" >Female</md-radio-button>
+</md-radio-group>
+</div>
+
+  <div layout="row" style="margin-top: 8px;" ng-if="zbnewcase.casetype == 'Elder Law Married Application'">
+    <div style="line-height: 24px; margin: 8px; width: 45%;" >
+      <label>CS First Name</label>
+      <input type="text" ng-model="zbnewcase.csfname" style="background-color: #fff;">
+  </div>
+
+    <div style="line-height: 24px; margin: 8px; width: 45%;">
+      <label>CS Last Name</label>
+      <input type="text" ng-model="zbnewcase.cslame" style="background-color: #fff;">
+  </div>
+</div>
+
+
+
+    <div   style="line-height: 24px; margin: 8px;" ng-if="zbnewcase.casetype == 'Elder Law Married Application'">
+      <label>CS Address</label>
+      <input type="text" ng-model="zbnewcase.csaddress" style="background-color: #fff;">
+  </div>
+
+    <div   style="line-height: 24px; margin: 8px;" ng-if="zbnewcase.casetype == 'Elder Law Married Application'">
+      <label>CS City State Zip</label>
+      <input type="text" ng-model="zbnewcase.cscsz" style="background-color: #fff;">
+  </div>
+</div>
+
+<div layout="row" ng-if="zbnewcase.casetype == 'Elder Law Married Application'">
+    <div   style="line-height: 24px; margin: 8px;" >
+      <label>CS DOB</label>
+      <input type="date" ng-model="zbnewcase.csdob" style="background-color: #fff;"  ng-change="calccsagenew()">
+    </div>
+    <div   style="line-height: 24px; margin: 8px; width: 70px;" ng-if="zbnewcase.casetype == 'Elder Law Married Application'">
+      <label>CS Age</label>
+      <input type="number" ng-model="zbnewcase.csage" style="background-color: #fff; width: 70px;">
+    </div>
+  </div>
+
+<div style="display: block; line-height: 24px; margin: 8px;" ng-if="zbnewcase.casetype == 'Elder Law Married Application'">
+   <label style="display: block;  ">CS Sex</label>
+<md-radio-group ng-model="zbnewcase.cssex" layout="row">
+  <md-radio-button name="cssex" ng-model="zbnewcase.cssex" value="Male"  >Male</md-radio-button> 
+  <md-radio-button name="cssex" ng-model="zbnewcase.cssex" value="Female" >Female</md-radio-button>
+</md-radio-group>
+</div>
+
+
+  <div style="line-height: 24px; margin: 8px;">
+    <label>Fee</label>
+    <input type="text" ng-model="zbnewcase.fee">
+  </div>          
+
+
+</div>    <!--End of Client Column-->
+
+
+<div layout="column" flex="30" style="margin: 10px auto; border: black solid 2px; padding: 5px; width: 50%; min-height: 400px;background-color: #FAEAAF">
+  <div style="line-height: 24px; margin: 8px;"  ng-if="zbnewcase.casetype == 'Elder Law Married Application' || zbnewcase.casetype == 'Elder Law Single Application'">
+    <md-button class="md-raised md-primary" ng-click="findasnfnew()" ng-if="!zbnewcase.facility">Find SNF</md-button>    
+      <label  ng-if="zbnewcase.facility">Facility</label>
+      <input type="text" ng-model="zbnewcase.facility" style="background-color: #fff;" ng-if="zbnewcase.facility">
+      <div style="line-height: 24px; margin: 8px;">
+          <label  >Admission Date</label>
+          <input type="date" ng-model="zbnewcase.facilityadmitdate" style="background-color: #fff;">
+      </div>
+  </div>
+
+   <label align="left" style="padding: 9px; font-weight: bolder;">First Meeting Notes</label>
+  <textarea style="width: 95%; height: 18%; margin: auto;"  ng-model="zbnewcase.postmtgnotes"></textarea> 
+    <label align="left" style="padding: 9px; font-weight: bolder;">Plan</label>
+    <textarea style="width: 95%; height: 18%; margin: auto;"  ng-model="zbnewcase.plan"></textarea>     
+    <label align="left" style="padding: 9px; font-weight: bolder;">Issues</label>
+    <textarea style="width: 95%; height: 18%; margin: auto;" ng-model="zbnewcase.issues"></textarea>
+  <div class="todos">
+    <label style="display: block;">Next Action</label>
+    <input type="text" ng-model="zbnewcase.next_action" style="width: 95%; background-color: lightblue;margin-bottom: 20px;">
+  </div>
+  <div>
+    <md-button class="md-primary md-raised" ng-click="savenewcasecheck()" ng-disabled="caseexists || !zbnewcase.cfname || !zbnewcase.clname || !zbnewcase.casetype">SAVE NEW CASE</md-button>
+
+    <div ng-if="caseexists">
+      <h2>Possible Case Duplication</h2>
+      <h4>The Following Case was found</h4>
+      <label style="display: block;">Contact Name</label>
+      <b>{{caseexists.cfname}} {{caseexists.clname}}</b>
+      <label style="display: block;">Client Name</label>
+      <b>{{caseexists.fname}} {{caseexists.lname}}</b>
+      <label style="display: block;">Case Type</label>
+      <b>{{caseexists.casetype}}</b>
+      <label style="display: block;">Case Status</label>
+      <b>{{caseexists.casestatus}}</b>
+      <label style="display: block;">Attorney</label>
+      <b>{{caseexists.atty}}</b>
+      <label style="display: block;">Date Created</label>
+      <b>{{caseexists.datecreated}}</b>
+    <div layout="row">
+      <div>
+        <md-button ng-click="abortsave()" class="md-raised md-warn">Abort</md-button>
+      </div>
+      <div>
+        <md-button ng-click="savecase()" class="md-raised md-primary">Save Anyway</md-button>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>  
+
+</div>
+
+</md-tab>
+
+
+<!--END NEW CASE-->
+
+ 
+
+<md-tab label="Case Data" ng-click="getcasedata()"  ng-if="zbcase">
+  <div ng-if="zbcase.casetype == 'Elder Law Single Application'">
+    <div ng-include="'components/zbcases/includes/maappsSingle.html'"></div>
+  </div>
+  <div ng-if="zbcase.casetype == 'Elder Law Married Application'">
+    <div ng-include="'components/zbcases/includes/maappsMarried.html'"></div>
+  </div>  
+    <div ng-if="zbcase.casetype == 'Probate Pennsylvania'">
+    <div ng-include="'components/zbcases/includes/probatePa.html'"></div>
+  </div>  
+      <div ng-if="zbcase.casetype == 'Probate Florida'">
+    <div ng-include="'components/zbcases/includes/probateFla.html'"></div>
+  </div>  
+</md-tab>
+
+ <md-tab label="Calc Sheet"  ng-if="zbcase">
+  <md-content>
+<iframe width='100%' height='700' src="https://docs.google.com/spreadsheets/d/1RTAaXhJ-RRhCFKdTGgqQDXknYoI0RadCJR1lKsKZvTI/pubhtml?widget=true&amp;headers=false"></iframe>
+</md-content>
+</md-tab>
+  <md-tab label="Gifting Sheet"  ng-if="zbcase">
+  <md-content>
+  <div layout="row">
+    <div>
+          <form method="post" action="php/sheets/gifting.php">
+            <div layout="column">
+          <label style="display: block;">Client Name</label>
+          <input name="pname" type="text">
+          <br />
+            <label style="display: block;">Gift Amount</label>
+          <input name="giftamt" type="number">
+          <br />
+        <input class="md-primary md-raised" role="button" type="submit" >
+        </div>
+        </form>
+    </div>
+<div>
+      <form method="post" action="php/sheets/cscalcs.php">
+        <div layout="column">
+          <label style="display: block;">IS Name</label>
+          <input name="isname" type="text">
+          <br />
+            <label style="display: block;">CS Name</label>
+          <input name="csname" type="text">
+          <br />
+        <input class="md-primary md-raised" role="button" type="submit" >
+      </div>
+    </form>
+</div>
+</div>
+</md-content>
+</md-tab>
+
+</md-tabs>
+</div>
+</div>

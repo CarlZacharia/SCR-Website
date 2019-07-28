@@ -1,0 +1,48 @@
+  <md-dialog aria-label="{{dcase.first_name}} {{dcase.last_name}}" >
+      <md-dialog-content style="width:500px;  padding: 6px; margin: 10px;">
+        <div layout="column" flex style="padding: 12px;">
+          <h3>Edit ToDo for {{dcase.first_name}} {{dcase.last_name}} </h3>
+          <p>
+            <label style="display: block;">Description</label>
+            <input type="text" style="width: 100%; background-color: wheat;" ng-model="dtodo.task" placeholder="Enter New Task or Todo">
+         </p>
+          <p>
+            <label style="display: block;">Due Date</label>
+            <input type="date" style=" background-color: wheat;width: 40%;" ng-model="dtodo.duedate">
+          </p>
+          <p>
+            <md-checkbox
+              ng-model="dtodo.priority"
+              aria-label="Priority"
+              ng-true-value="1"
+              ng-false-value="0">Priority?
+            </md-checkbox>
+          </p>
+ 
+          <md-radio-group ng-model="dtodo.todowait" layout="row">
+          <md-radio-button ng-model="dtodo.todowait" name="todowait" value="Todo">Todo</md-radio-button>
+          <md-radio-button ng-model="dtodo.todowait" name="todowait" value="Await">Await</md-radio-button>
+          </md-radio-group>
+
+          <p>
+            <md-checkbox
+              ng-model="dtodo.status"
+              aria-label="Status"
+              ng-true-value="'Done'"
+              ng-false-value="'Pending'">Done?
+            </md-checkbox>
+          </p>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button  md-autofocus ng-click="hide()" class="md-raised md-warn">
+        Cancel
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="saveedittodo()" class="md-raised md-primary">
+        Save
+      </md-button>
+
+    </md-dialog-actions>
+</md-dialog>

@@ -1,0 +1,162 @@
+<style>
+table {
+
+}
+.tdr {
+	text-align: right;
+	padding: 4px;
+}
+.tdrb {
+	.text-align: right;
+	font-weight: bold;
+	padding: 4px;
+}
+</style>
+
+<div layout="row" style="background-color:darkblue;color:yellow;margin-bottom: 20px;padding: 10px;">
+
+<div flex="10">
+<label style="display: block;">Month</label>
+<select ng-model="month" ng-change="getmanos()">
+	<option value="0">January</option>
+	<option value="1">February</option>
+	<option value="2">March</option>
+	<option value="3">April</option>			
+	<option value="4">May</option>
+	<option value="5">June</option>
+	<option value="7">July</option>
+	<option value="7">August</option>			
+	<option value="8">September</option>
+	<option value="9">October</option>
+	<option value="10">November</option>
+	<option value="11">December</option>					
+</select>
+</div>
+<div flex="10">
+<label style="display: block;">Year</label>
+<select ng-model="year" ng-change="getmanos()">
+	<option value="2016">2016</option>
+	<option value="2015">2015</option>
+	<option value="2014">2014</option>
+	<option value="2013">2013</option>
+	<option value="2012">2012</option>	
+</select>
+</div>
+
+</div>
+
+<div layout="row">
+<div flex="25">
+<table>
+<tr><th >YEAR </th><th>{{manos.year}}</th></tr>	
+<tr><td class="tdr">Minimum MMNA</td><td class="tdrb">{{manos.minmmna | currency}}</td></tr>
+<tr><td class="tdr">Maximum MMNA</td><td class="tdrb">{{manos.maxmmna | currency}}</td></tr>
+<tr><td class="tdr">Minimum CSRA</td><td class="tdrb">{{manos.mincsra | currency}}</td></tr>
+<tr><td class="tdr">Maximum CSRA</td><td class="tdrb">{{manos.maxcsra | currency}}</td></tr>
+<tr><td class="tdr">PNA</td><td class="tdrb">{{manos.pna | currency}}</td></tr>
+<tr><td class="tdr">Daily Penalty</td><td class="tdrb">{{manos.penday | currency}}</td></tr>
+<tr><td class="tdr">Monthly Penalty</td><td class="tdrb">{{manos.penmon | currency}}</td></tr>
+<tr><td class="tdr">Shelter Std.</td><td class="tdrb">{{manos.shelterstd | currency}}</td></tr>
+<tr><td class="tdr">Heat</td><td class="tdrb">{{manos.heat | currency}}</td></tr>
+<tr><td class="tdr">No Heat</td><td class="tdrb">{{manos.noheat | currency}}</td></tr>
+<tr><td class="tdr">Phone Only</td><td class="tdrb">{{manos.phoneonly | currency}}</td></tr>
+<tr><td class="tdr">Home Maint.</td><td class="tdrb">{{manos.homemaint | currency}}</td></tr>
+<tr><td class="tdr">Part B</td><td class="tdrb">{{manos.partb | currency}}</td></tr>
+<tr><td class="tdr">Excess Home Eq.</td><td class="tdrb">{{manos.excesshomeeq | currency}}</td></tr>
+<tr><td class="tdr">Income Limit</td><td class="tdrb">{{manos.nmpinc | currency}}</td></tr>
+</table>
+</div>
+<div flex="25" style="margin-left: 6px; background-color: lightyellow;border: black solid 2px;" >
+	<h3 style="margin-left: 15px;">Gift Calculator</h3>
+		<label style="display:block;margin-left: 15px;">
+		Amount of Gift
+		</label>
+		<div style="display: block; margin-left: 6px;">
+		<input type="number" ng-model="giftamt" ng-blur="pencalc()" style=" margin-left: 10px;">
+		</div>
+		<label style="display:block; margin-left: 15px;">
+		Start Date
+		</label>
+		<div style="display: block; margin-left: 6px;">
+		<input type="date" ng-model="startdate" ng-change="pencalc()" style="margin-left: 6px;">
+		</div>		
+		<div style="margin-bottom:10px;margin-top: 10px; margin-left: 15px;">Penalty in Days = <b>{{pendays}}</b></div>
+		<div style="margin-bottom:10px; margin-left: 15px;">Penalty in Months = <b>{{penmonths}}</b></div>		
+		<div style="margin-bottom:10px; margin-left: 15px;">Penalty End Date = <b>{{enddate | date : format : "mediumDate"}}</b></div>	
+		<label style="display:block; margin-left: 15px;">
+		SNF Daily Rate
+		</label>
+		<div style="display: block; margin-left: 6px;">
+		<input type="number" ng-model="snfdr" ng-blur="savecalc()" style="margin-left: 6px;">
+		</div>		
+		<label style="display:block; margin-left: 15px;">
+		Monthly Income
+		</label>
+		<div style="display: block; margin-left: 6px;">
+		<input type="number" ng-model="monthlyinc" ng-blur="savecalc()" style=" margin-left: 6px;">
+		</div>		
+		<label style="display:block; margin-left: 15px;">
+		Monthly Medical Insurance Premium
+		</label>
+		<div style="display: block; margin-left: 6px;">
+		<input type="number" ng-model="medins" ng-blur="savecalc()" style=" margin-left: 6px;">
+		</div>		
+		<div style="margin-bottom:10px;margin-top: 10px; margin-left: 15px;">Monthly Net Income = <b>{{netincome | currency}}</b></div>
+		<div style="margin-bottom:10px; margin-left: 15px;">Amount to Pay to SNF = <b>{{paytosnf | currency}}</b></div>		
+		<div style="margin-bottom:10px; margin-left: 15px;">Total Est. Savings = <b>{{savings | currency}}</b></div>	
+</div>
+
+<div flex="12.5">
+
+<div style="margin-left: 40px;">
+<h2>Single Income Calculator</h2>
+<table>
+<tr><td>Gross Social Security Income</td><td><input type="number" ng-model="ssinc" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>Gross Pension Income</td><td><input type="number" ng-model="peninc" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>Gross VA Income</td><td><input type="number" ng-model="vainc" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>Gross Other Income</td><td><input type="number" ng-model="othinc" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>Gross Income</td><td>{{grossincome | currency}}</td></tr>
+<tr><td>Medical Insurance</td><td><input type="number" ng-model="medins" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>Part B</td><td><input type="number" ng-model="npartb" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>Part D</td><td><input type="number" ng-model="partd" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>PNA</td><td><input type="number" ng-model="npna" ng-blur="calcsingleincome()"></td></tr>
+<tr><td>Gross Med. Ins.</td><td>{{grossmedins | currency}}</td></tr>
+<tr><td>Income Payable to SNF</td><td style="font-weight: bolder; text-align: left; font-size: 1.2em;">{{inctosnf | currency}}</td></tr>
+</table>
+</div>
+
+   <md-card style="width: 220px; padding:10px; margin-left: 40px;">
+
+    <md-card-title>
+    <md-card-title-text>Life Exp. Calculator</md-card-title-text></md-card-title>
+        <md-input-container class="md-icon-float md-icon-right md-block">
+      <label>Age</label>
+      <input ng-model="age" type="number" step="1" ng-blur='getle()' style="border:black solid 2px;margin-bottom: 15px; ">
+
+				
+	<p style="font-weight: bold; text-align: left;">Sex: <span class="radioValue">{{ sex }}</span> </p>
+    <md-radio-group ng-model="sex" ng-change='getle()'>
+      <md-radio-button value="Male" class="md-primary">Male</md-radio-button>
+      <md-radio-button value="Female"> Female </md-radio-button>
+    </md-radio-group>
+<p> Life Exp.: <b>{{le}}</b> years.</p>
+<p> IRA RMD Divisor: <b>{{rmd}}</b></p>
+    </md-input-container>
+</md-card>
+
+
+</div>
+
+
+<div flex="12.5">
+
+<div style="margin-left: 40px;">
+	<h2>Married Income Calculator</h2>
+<table>
+
+</table>
+</div>
+</div>
+
+
+</div>

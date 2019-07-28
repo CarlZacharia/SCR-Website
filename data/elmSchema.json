@@ -1,0 +1,101 @@
+ELM
+{
+"id":"",
+"cid": "",
+"atty": "",
+"office": "",
+"dateCreated": "",
+"dateModified": "",
+"isdata": {
+    "fname": "",
+    "ismi": "",
+    "islname": "",
+    "ssn": "",
+    "dob": "",
+    "age": "",
+    "medinsco": "",
+    "medins": "",
+    "dateAdmit": "",
+    "dateInsEnd": ""
+    },
+"csdata": {
+    "csfname": "",
+    "csmi": "",
+    "csfname": "",
+    "csmi": "",
+    "cslname": "",
+    "csaddress": "",
+    "cscsz": "",
+    "cstelephone": "",
+    "csemail": ""
+    },
+"snf": {
+    "snfname": "",
+    "snfaddress": "",
+    "snfcsz": "",
+    "snftelephone": "",
+    "snfcontact": "",
+    "snfdr": 0
+    },
+"assets": [{
+    "co": "",
+    "type": "",
+    "owner": "",
+    "ssvalue": "",
+    "fv_db": "",
+    "mavalue": "",
+    "notes": ""
+    }],
+"isincome": [{
+    "inctype": 0,
+    "incgross": 0,
+    "incded": 0,
+    "incnet": 0,
+    "incdeddesc": ""
+    }],
+"csincome": [{
+    "inctype": 0,
+    "incgross": 0,
+    "incded": 0,
+    "incnet": 0,
+    "incdeddesc": ""
+    }],
+"assettotals": [{
+    "banks": 0,
+    "inv": 0,
+    "veh": 0,
+    "lifv": 0,
+    "licv": 0,
+    "realty": 0,
+    "exemptrealty": 0,
+    "Exemptveh": 0,
+    "exemptcsira": 0,
+    "exemptcsli":0,
+    "exemptisli": 0
+    "totalexempt": 0
+    }],
+"inctotals": [{
+    "is": 0,
+    "cs": 0
+    }],
+"manos": [{
+    "year": "",
+    "month": "",
+    "yearhalf": "",
+    "minmmna": 0,
+    "maxmmna": 0,
+    "mincsra": 0,
+    "maxcsra": 0,
+    "sua": 0,
+    "shelterstd": 0,
+    "le": 0,
+    "irarmd": 0,
+    "mmna": 0,
+    "csra": 0,
+    "isretained": 0,
+    "totalretained": 0,
+    "spenddown": 0,
+    "penday": 0,
+    "penmon": 0
+    }]
+}

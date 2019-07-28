@@ -1,0 +1,251 @@
+<style>
+#medinsdiv {
+  min-height: 300px;
+  max-height: 100%;
+  display: table-cell;  
+  border-collapse: collapse;
+  border: solid black 4px;
+  background-color: #F5F5FF;
+}
+
+#sheltersdiv {
+  min-height: 300px;
+  max-height: 100%;
+  display: table-cell;
+  border-collapse: collapse;
+  border: solid black 4px;
+  background-color: #F5F5FF;
+}
+
+#resultsdiv {
+  min-height: 300px;
+  max-height: 100%;
+  display: table-cell;
+  border-collapse: collapse;
+  border: solid black 4px;
+  background-color: #F5F5FF;
+
+}
+.tdr {
+  text-align: right; 
+}
+tr {padding: 3px !important;}
+.col-lg-4 {
+    width: 31%;
+ 
+}
+.erow{
+      margin:0 auto;
+}
+input[type=number]{width: 150px;}
+.hurlydiv {
+  background-color: DarkRed;
+  color: white;
+  font-weight: bolder;
+}
+
+.container{
+/*    margin: auto;
+ min-width: 1000px;
+    border: 4px solid black;
+    height: 100%;
+    min-height: 750px;
+    max-width: 1140px;
+    max-height: 650px;
+*/    background-color: wheat;
+    box-sizing: border-box;
+}
+input[type=text]{
+	font-weight: bold;
+}
+input[type=number]{
+	font-weight: bold;
+}
+input[type=date]{
+	font-weight: bold;
+}
+legend {background-color: black; color: white; padding: 15px; text-align: center; 	}
+.tdl{
+    text-align: left; 
+    font-weight: bold;
+}
+.tdr{
+    font-weight: bold;
+    text-align: right;
+
+}
+.tdc{
+    font-weight: bold;
+    text-align: center;
+}
+td {
+	    padding: 14px;
+}
+</style>
+
+<center><img src="img/zblogo.jpg" style="width:20%; height: 20%; margin: auto; text-align: center;"></center>
+
+
+<br />
+<div class="row erow">
+
+  <legend>MAAPPS - QUICK CALCS<br />
+ 
+  I.S. Name&nbsp;&nbsp;<input type="text" ng-model="isname" style="color:DarkBlue;text-align:center;margin-left: 6px;">
+  <br />
+  SNF Name<input type="text" ng-model="snf" style="color:DarkBlue;text-align:center;margin-left: 2px;">
+</legend>
+  <button class="btn btn-lg btn-primary" ng-click="goback()">BACK</button>
+
+
+  <div class="col-lg-4" id="medinsdiv">
+        <div style="padding: 10px;font-weight: bolder; background-color: DarkBlue; color:yellow; text-align:center;width: 95%;"><h4>Income and Assets</h4></div>
+
+  <table class="table">
+    <tr>
+      <td  class="tdr">CS Age</td>
+      <td  class="tdr"><input type="number" ng-model="csage" class="tdr" class="input-sm" ng-blur="getle()"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">CS Sex</td>
+      <td  class="tdr">
+      <input type="radio" name="cssex" ng-model="cssex" id="cssex-0" value="Male" checked="checked" ng-change="getle();">
+      Male
+      <input type="radio" name="cssex" ng-model="cssex" id="cssex-1" value="Female" ng-change="getle();">
+      Female
+      </td>
+    </tr>    
+    <tr><td class="tdr">CS Life Exp {{csley}}</td>
+      <td class="tdc">CS IRA RMD {{csrmd}}</td></tr>
+    <tr>
+      <td  class="tdr">CSRA</td>
+      <td  class="tdr"><input type="number" ng-model="csra" class="tdr" class="input-sm" ng-blur="calcexps()"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">CS IRA</td>
+      <td  class="tdr"><input type="number" ng-model="csira" class="tdr" ng-blur="calcexps()"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">IS MONTHLY INCOME</td>
+      <td  class="tdr"><input type="number" ng-model="isinc" class="tdr" ng-blur="calcexps()"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">CS MONTHLY INCOME</td>
+      <td  class="tdr"><input type="number" ng-model="csinc" class="tdr" ng-blur="calcexps()"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">IS MONTHLY MED INSURANCE</td>
+      <td  class="tdr"><input type="number" ng-model="medins" class="tdr" ng-blur="calcexps()"></td>
+    </tr>    
+  </table>
+
+  </div><!-- End medinsdiv -->
+
+
+
+  <div class="col-lg-4" id="sheltersdiv">
+        <div style="padding: 10px;font-weight: bolder; background-color: DarkBlue; color:yellow; text-align:center;width: 95%;"><h4>Monthly Shelter Expenses of the C.S.</h4></div>
+ 
+  <table class="table">
+    <tr>
+      <td  class="tdr">Monthly Rent</td>
+      <td  class="tdr"><input type="number" ng-blur="calcexps()" ng-model="rent" class="tdr"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">Monthly City Taxes</td>
+      <td  class="tdr"><input type="number" ng-blur="calcexps()" ng-model="retaxesmuni" class="tdr"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">Monthly County Taxes</td>
+      <td  class="tdr"><input type="number" ng-blur="calcexps()" ng-model="retaxescounty" class="tdr"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">Monthly School Taxes</td>
+      <td  class="tdr"><input type="number" ng-blur="calcexps()" ng-model="retaxessd" class="tdr"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">Monthly Home Ins.</td>
+      <td  class="tdr"><input type="number" ng-blur="calcexps()" ng-model="hoins" class="tdr"></td>
+    </tr>
+    <tr>
+      <td  class="tdr">Monthly Condo Fees</td>
+      <td  class="tdr"><input type="number" ng-blur="calcexps()" ng-model="condofees" class="tdr"></td>
+    </tr>    
+    <tr>
+      <td  class="tdr">Pay for Heat?</td>
+      <td  class="tdr">
+        <input type="radio" name="utils" ng-change="calcexps()" ng-model="utils" value="heat">Heat
+        <input type="radio" name="utils" ng-change="calcexps()" ng-model="utils" value="noheat">No Heat<br />
+        <input type="radio" name="utils" ng-change="calcexps()" ng-model="utils" value="phoneonly">Phone Only
+      </td>
+      <tr>
+        <td  class="tdr">Utility Allowance</td>
+        <td  class="tdr"><input type="number" readonly ng-blur="calcexps()" ng-model="sua" class="tdr"></td>
+      </tr>
+    </tr>    
+    <tr><td class="tdr">Total Monthly</td><td class="tdr"><b>{{totalshelters | currency}}</b></td></tr>
+    <tr><td class="tdr">Shelter Standard</td><td class="tdr"><b>{{shelterstd | currency}}</b></td></tr>
+    <tr ><td class="tdr">Excess Shelters</td><td class="tdr"><b>{{excessshelters | currency}}</b></td></tr>        
+    <tr style="font-size: 1.4em; font-weight: bolder; color: darkgreen;text-align:center;"><td colspan="2">MMNA: {{mmna | currency}}</td>
+    </tr>
+    <tr  ng-show="overmaxmmna > 0" style="font-size: 1.4em; font-weight: bolder; color: darkred;text-align:center;">
+      <td  colspan="2"> OVER MAX {{overmaxmmna | currency}}</td>
+    </tr>    
+</table>
+</div><!-- End sheltersdiv -->
+  <div class="col-lg-4" id="resultsdiv">
+    <div style="padding: 10px;font-weight: bolder; background-color: DarkBlue; color:yellow; text-align:center;width: 95%;"><h4>Results</h4></div>
+    <table class="table">
+      <tr>
+        <td class="tdr">Gross Income of I.S.</td><td class="tdr">{{isinc | currency}}</td>
+      </tr>
+      <tr>
+        <td class="tdr">- Personal Needs Allowance</td><td class="tdr">{{MANOS.pna | currency}}</td>
+      </tr>
+      <tr>
+        <td class="tdr">- Medical Insurance Paid</td><td class="tdr">{{medins | currency}}</td>
+      </tr>
+      <tr>
+        <td class="tdr">Income Available of I.S.</td><td class="tdr">{{isincavail | currency}}</td>
+      </tr>
+      <tr>
+        <td class="tdr">MMNA of the C.S.</td><td class="tdr">{{mmna | currency}}</td>
+      </tr>      
+      <tr>
+        <td class="tdr">Monthly Income of C.S.</td><td class="tdr">{{csinc | currency}}</td>
+      </tr>      
+      <tr>
+        <td class="tdr">C.S. Income from CSRA</td><td class="tdr">{{incfromcsra | currency}}</td>
+      </tr>      
+      <tr>
+        <td class="tdr">C.S. Income from IRA</td><td class="tdr">{{incfromira | currency}}</td>
+      </tr>
+      <tr>
+        <td class="tdr">C.S. Gross Income</td><td class="tdr">{{csgrossinc | currency}}</td>
+      </tr>
+      <tr ng-show="isincavail > 0">
+        <td colspan="2" style="font-size: 1.4em; font-weight: bolder; color: darkgreen;text-align:right;">Income Payable to C.S. {{isinctocs | currency}}</td>
+      </tr>
+      <tr ng-show="isinctosnf > 0">
+        <td colspan="2" style="font-size: 1.4em; font-weight: bolder; color: darkgreen;text-align:right;">Income Payable to SNF {{isinctosnf | currency}}</td>
+      </tr>            
+    </table>
+    <div ng-hide="isinctosnf > 0 || csgrossinc == 0">
+      <hr />
+      <div class="hurlydiv">
+        <table class="table">
+          <tr><th colspan="2"><center><b>HURLY CASE!</b></center></th></tr>
+          <tr><td>Monthly Shortfall</td>
+              <td>{{monthlyshortfall *-1 | currency}}</td></tr>
+          <tr><td>Life Expectancy of C.S.</td>
+              <td>{{csley}} years</td></tr>
+          <tr><td>Hurly Amount @ {{irate}}%</td>
+              <td>{{hurlyamt *-1 | currency}}</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div><!-- End of Row -->
+
+</section>
+

@@ -1,0 +1,9 @@
+[14-Jul-2016 17:35:26 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in D:\home\maapps.com\wwwroot\scr\php\storedocs.php on line 25
+[14-Jul-2016 17:37:55 America/Chicago] PHP Fatal error:  Call to undefined function push() in D:\home\maapps.com\wwwroot\scr\php\storedocs.php on line 31
+[14-Jul-2016 19:46:05 America/Chicago] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in D:\home\maapps.com\wwwroot\scr\php\getcasedir.php on line 16
+[14-Jul-2016 20:15:31 America/Chicago] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in D:\home\maapps.com\wwwroot\scr\php\getcasedir.php on line 14
+[15-Jul-2016 05:59:54 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\getcasedir.php on line 27
+[02-Aug-2017 09:30:13 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\getauths.php on line 8
+[02-Aug-2017 09:30:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\getauths.php on line 8

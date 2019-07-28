@@ -1,0 +1,27 @@
+<md-content class="md-padding" layout="column">
+	<md-card>
+		<md-card-title>
+			<md-card-title-media>
+				<div class="mdimedia card-media" layout-padding>
+					<img ng-src="{{user.profile.picture}}" alt="profile.picture">
+				</div>
+				<md-card-actions layout="column" layout-align="end center">
+					<md-button ng-click="user.getMessage()">Get Message </md-button>
+					<md-button ng-click="user.getSecretMessage()">Get Secret Message </md-button>
+				</md-card-actions>
+			</md-card-title-media>
+			<md-card-title-text>
+			<table>
+				<tr>
+					<td><span class="md-headline">Name:</span></td><td><span class="md-headline">{{user.profile.nickname}}</span></td></tr>
+				<tr><td>Email</td><td><span class="subhead">{{user.profile.email}}</span></td></tr>
+				<tr><td>Class:</td><td><span class="subhead">{{user.profile.user_metadata.userClass}}</span></td></tr>
+			</table>
+				
+				<h3>{{user.message}}</h3>
+
+
+			</md-card-text>
+		</md-card-title>
+	</md-card>
+</md-content>

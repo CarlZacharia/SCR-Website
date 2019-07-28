@@ -1,0 +1,166 @@
+<style>
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+ul li {
+    padding: 4px 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+    border-bottom: none
+}
+</style>
+
+<div ng-cloak>
+
+<md-tabs md-dynamic-height md-border-bottom md-selected="selectedTab">
+
+
+	<md-tab label="Search">
+	<div style="background-color: black; color: white;padding: 10px;width: 200px;">
+		<label style="display: block;margin-top: 15px;"><b>Filter Search Terms</b></label>
+			<input type="text" ng-model="query">
+	   	</div>
+ 			<ul>
+	 			<li ng-repeat="x in auths | filter : query">
+					<a href="{{x.link}}"  target="_blank"  >{{x.description}}</a> 
+		        	<p>Type: {{x.type}}</p>
+		        	<p>Keywords: {{x.keywords}}</p>
+	  			</li>
+	   		</ul>
+
+	</md-tab>
+
+
+	<md-tab label="Medicaid">
+ 		<ul  ng-repeat="x in ma track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank"  >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>
+
+
+
+  	<md-tab label="VA">
+ 		<ul  ng-repeat="x in va track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank"  >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>
+
+  	<md-tab label="Probate">
+ 		<ul  ng-repeat="x in probate track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank"  >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>
+
+  	<md-tab label="SSA">
+ 		<ul  ng-repeat="x in ssa track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank"  >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>	
+
+  	<md-tab label="Estate Planning">
+ 		<ul  ng-repeat="x in ep track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank" >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>		
+
+  	<md-tab label="Guardianships">
+ 		<ul  ng-repeat="x in guard track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank" >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>	
+
+  	<md-tab label="SCR">
+ 		<ul  ng-repeat="x in scr track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank" >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>	
+
+  	<md-tab label="ZB">
+ 		<ul  ng-repeat="x in zb track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank" >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>	
+
+  	<md-tab label="Florida">
+ 		<ul  ng-repeat="x in florida track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank" >{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>	
+  	<md-tab label="Other">
+ 		<ul  ng-repeat="x in other track by $index">
+ 			<li > <a href="{{x.link}}"  target="_blank">{{x.description}}</a> 
+	        	<p>Type: {{x.type}}</p>
+	        	<p>  Keywords: {{x.keywords}}</p>
+	        </li>
+	    </ul>
+	</md-tab>					
+
+  	<md-tab label="Add Authority">
+  		<table>
+
+  			<tr><td>Area</td>
+  				<td><select ng-model="aarea">
+  				<option value="Medicaid">Medicaid</option>
+  				<option value="VA">Veterans</option>
+  				<option value="Probate">Probate</option>
+  				<option value="EP">Estate Planning</option>
+  				<option value="SSA">Social Security</option>
+  				<option value="Guardianships">Guardianships</option>
+  				<option value="SCR">SCR Form</option>
+  				<option value="ZB">ZB Form</option>  		
+  				<option value="Florida">Florida</option>
+  				<option value="Other">Other</option>
+  			</select></td></tr>
+  			<tr><td>Keywords</td><td><input type="text" ng-model="akeywords" style="width:400px;"></td></tr>
+  			<tr><td>Description</td><td style="width:200px;"><input type="text" ng-model="adesc" style="width:400px;"></td></tr>
+  			<tr><td>Type</td>
+  				<td><select ng-model="atype">
+  				<option value="Statute">Statute</option>
+  				<option value="Regulation">Regulation</option>
+  				<option value="Opinion">Opinion</option>
+  				<option value="Forms">Form</option>
+  				<option value="Handbook">Handbook</option>
+  				<option value="Guide">Guide</option>
+  				<option value="OPSMemo">OPSMemo</option>
+  				<option value="Other">Other</option>
+  			</select></td></tr>  			
+  			<tr><td>Link</td><td style="width:200px;"><input type="text" ng-model="alink" style="width:400px;"></td></tr>
+  			<tr><td></td><td><md-button ng-click="addnewauthority()" class="md-primary md-raised">Add Authority</button></td></tr>
+  		</table>
+
+	</md-tab>
+
+</md-tabs>
+</div>

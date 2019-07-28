@@ -1,0 +1,17 @@
+   <md-card ng-controller="leController" style="width: 220px; padding:10px;">
+
+    <md-card-title>
+    <md-card-title-text>Life Exp. Calc.</md-card-title-text></md-card-title>
+        <md-input-container class="md-icon-float md-icon-right md-block">
+      <label>Age</label>
+      <input ng-model="age" type="number" step="1" ng-blur='getle()' style="border:black solid 2px;margin-bottom: 15px; ">
+
+				
+	<p style="font-weight: bold; text-align: left;">Sex: <span class="radioValue">{{ sex }}</span> </p>
+    <md-radio-group ng-model="sex" ng-change='getle()'>
+      <md-radio-button value="Male" class="md-primary">Male</md-radio-button>
+      <md-radio-button value="Female"> Female </md-radio-button>
+    </md-radio-group>
+ Life Exp.: <b>{{le}}</b> years.
+    </md-input-container>
+</md-card>

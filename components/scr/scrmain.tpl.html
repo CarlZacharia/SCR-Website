@@ -1,0 +1,319 @@
+<style>
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;
+    border: 1px solid #e1e1e1; }
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background: white; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
+    input[type=text] {background-color: wheat; border-bottom: black solid 1px; border-left: black solid 1px; border-right: black solid 1px;}
+textarea {
+  height:auto;
+  max-width:600px;
+  color:#999;
+  font-weight:400;
+  width: 500px;
+  background:#fff;
+  border-radius:3px;
+  line-height:2em;
+  border:none;
+  box-shadow:0px 0px 5px 1px rgba(0,0,0,0.1);
+  padding:30px;
+  -webkit-transition: height 2s ease;
+-moz-transition: height 2s ease;
+-ms-transition: height 2s ease;
+-o-transition: height 2s ease;
+transition: height 2s ease;
+}
+.tdr {
+  padding-right: 2px; 
+  text-align: right;
+}
+.popupContainer {
+  width: 800px !important;
+}
+table td {
+  padding: 6px;
+}
+textarea {
+  color: black;
+  font-weight: bolder;
+}
+</style>
+   
+
+<div ng-cloak>
+  <md-content >
+    <md-tabs md-dynamic-height md-border-bottom>
+
+
+      <md-tab label="Cases by Catgegory" ng-click="catcases()">
+      <div>Enter Temp User Inits: <input ng-model="tempuser" ng-blur="catcases()"  autofocus style="padding: 4px; text-align: center; font-weight: bolder; width: 40px;">
+        <button ng-submit="catcases()" >Go</button>
+        <md-content class="md-padding" ng-controller="scrController">
+        <div layout="row">
+
+          <div flex>
+
+          <h3 class="md-display-5">New ({{newcases.length}})</h3>
+            <ul ng-repeat="c in newcases" style="list-style-type:none">
+              <li><a href="" value="{{c.resident_id}}" ng-click="showCatCaseinDialog()">{{c.last_name}}, {{c.first_name}}</a><br />
+                <small>{{c.date_assigned | date : format : "mediumDate"}}</small></li>
+            </ul>
+          </div>
+          <div flex>
+         <h3 class="md-display-5">Filed ({{filedcases.length}})</h3>
+            <ul ng-repeat="c in filedcases" style="list-style-type:none">
+              <li><a href="" value="{{c.resident_id}}" ng-click="showCatCaseinDialog()">{{c.last_name}}, {{c.first_name}}</a><br />
+                <small>{{c.date_applied | date : format : "mediumDate"}}</small></li>
+            </ul>
+          </div>
+          <div flex>
+         <h3 class="md-display-5">Pending ({{pendingcases.length}})</h3>
+            <ul ng-repeat="c in pendingcases" style="list-style-type:none">
+              <li><a href="" value="{{c.resident_id}}" ng-click="showCatCaseinDialog()">{{c.last_name}}, {{c.first_name}}</a><br />
+                <small>{{c.date_pending | date : format : "mediumDate"}}</small></li>
+            </ul>            
+          </div>
+
+          <div flex>
+         <h3 class="md-display-5">Rejected ({{rejectedcases.length}})</h3>
+            <ul ng-repeat="c in rejectedcases" style="list-style-type:none">
+              <li><a href="" value="{{c.resident_id}}" ng-click="showCatCaseinDialog()">{{c.last_name}}, {{c.first_name}}</a><br />
+                <small>{{c.date_initdetermine | date : format : "mediumDate"}}</small></li>
+            </ul>
+          </div>
+          <div flex>
+         <h3 class="md-display-5">Appealled ({{appealledcases.length}})</h3>
+            <ul ng-repeat="c in appealledcases" style="list-style-type:none">
+              <li><a href="" value="{{c.resident_id}}" ng-click="showCatCaseinDialog()">{{c.last_name}}, {{c.first_name}}</a><br />
+                <small>{{c.date_initdetermine | date : format : "mediumDate"}}</small></li>
+            </ul>            
+          </div>
+          <div flex>
+         <h3 class="md-display-5">Problem Cases ({{problemcases.length}})</h3>
+            <ul ng-repeat="c in problemcases" style="list-style-type:none">
+              <li><a href="" value="{{c.resident_id}}" ng-click="showCatCaseinDialog()">{{c.last_name}}, {{c.first_name}}</a><br />
+                <small>{{c.date_initdetermine | date : format : "mediumDate"}}</small></li>
+            </ul>            
+          </div>
+        </div>
+
+
+        </md-content>
+      </md-tab>
+
+
+
+
+      <md-tab label="Case Management">
+
+      <br />
+	<span style="padding: 10px;"><label>Find a Case</label>  <input style="padding: 6px 10px 6px 10px;" type="text" ng-model="findcase" ng-change="findacase()" ng-click="clearnewcases()"></span>
+
+
+        <md-content class="md-padding" layout="row">
+
+      <md-input-container style="border: solid black 1px;padding: 1px 28px 2px 8px; margin: 8px;">
+            <md-select-header>
+      <span> <b>Facility</b></span>
+    </md-select-header>
+        <md-select ng-model="snfname">
+          <md-option ng-repeat="snf in snfs track by $index" value="{{snf.provider_id}}" >
+            {{snf.name}}
+          </md-option>
+        </md-select>
+
+      </md-input-container>
+
+	<md-input-container style="border: solid black 1px;padding: 1px 28px 2px 8px; margin: 8px;">
+		<md-select-header>
+      		<span> <b>Status</b></span>
+	    </md-select-header>
+        <md-select ng-model="slmodel">
+          <md-option ng-repeat="sl in statuslevels track by $index" value="{{sl.sl}}" >
+            {{sl.statuslevel}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+  <md-input-container style="padding: 1px 28px 2px 8px; margin: 8px;">
+        <md-button class="md-raised md-primary" ng-click="getlistcases(cwname, snfname, slmodel)">Fetch</md-button>
+</md-input-container>
+
+        </md-content>
+
+  <div  ng-cloak layout="row">
+  <div flex="10" layout = "column">
+    <md-toolbar layout="row" class="md-hue-3">
+      <div class="md-toolbar-tools">
+        <span>{{caselevel}} <b>{{listcasescount}}</b></span>
+      </div>
+    </md-toolbar>
+    <md-content>
+      <md-list flex>
+      	<md-list-item ng-repeat="lc in listcases track by $index">
+      	<a href="" ng-click="getcase(lc.resident_id)" >{{lc.first_name}} {{lc.last_name}}</a>
+        </md-list-item>
+        <md-divider ></md-divider>
+       </md-list>
+           </md-content>
+  </div>
+
+  <div flex="20">
+    <md-toolbar layout="row" class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <span>Enter Name Days since got etc here</span>
+    </div>
+    </md-toolbar>
+
+
+    <md-content style="padding: 10px;" ng-if="case">
+
+</md-input-container>
+   <table>
+   	<tr><td class="tdr">Name: </td><td> <md-button class="md-raised md-primary"  ng-click="showClientDialog()">{{case.first_name}} {{case.last_name}}</md-button></td></tr>
+   	<tr><td class="tdr">SSN: </td><td><b>{{case.ssn}}</b></td></tr>   	
+   	<tr><td class="tdr">SNF: </td><td><b>{{case.snfname}}</b></td></tr>
+ 	  <tr><td class="tdr">SNF Resident ID: </td><td><b>{{case.resident_id}}</b></td></tr>   	
+   	<tr><td class="tdr">Caseworker: </td><td><b>{{case.caseworker}}</b></td></tr>
+   	<tr><td class="tdr">Current Status: </td><td><b>{{case.current_status}}</b></td></tr>   	
+   	<tr><td class="tdr">Admission Date: </td><td><b>{{momentadmitdate}} <small>[{{mad}} days ago]</small></b></td></tr>
+   	<tr><td class="tdr">Date Assigned: </td><td><b>{{momentdateassigned}} <small>[{{madss}} days til assigned]</small></b></td></tr>
+    <tr ng-if('case.date_appfiled')><td class="tdr">Date App Filed</td><td><b>{{momentappfiled}}</b></td></tr>      
+    <tr ng-if('case.date_pending')><td class="tdr">Date Pending Rec'd</td><td><b>{{momentpending}}</b></td></tr>      
+    <tr ng-if('case.date_initdetermine')><td class="tdr">Date Initial Determination</td><td><b>{{momentinitdetermine}}</b></td></tr>      
+    <tr ng-if('case.date_appealled')><td class="tdr">Date Appealled</td><td><b>{{momentappealled}}</b></td></tr> 
+    <tr ng-if('case.date_hearing')><td class="tdr">Date Hearing</td><td><b>{{momenthearing}}</b></td></tr>
+    <tr ng-if('case.date_final')><td class="tdr">Date Final Determination</td><td><b>{{momentfinal}}</b></td></tr> 
+    <tr ng-if('case.date_approved')><td class="tdr">Date Approved</td><td><b>{{momentapproved}}</b></td></tr>        
+    <tr ng-if('case.date_recipient_no')><td class="tdr">Receipient No.</td><td><b>{{case.recipient_no}}</b></td></tr>    
+ 
+   </table> 
+   <md-divider></md-divider>
+   <br />
+   <md-input-container style="width: 100%;"  class="md-block" layout-fill>
+   <label>Issues</label><br />
+   <textarea rows="5" ng-model="case.issues" ng-blur="updissuesplan(case.plan, case.issues, case.resident_id)" style="background-color: wheat;"></textarea>
+</md-input-container>
+   <md-divider></md-divider>
+<md-input-container style="width: 100%;"  class="md-block" layout-fill> 
+   <label>Plan</label><br />
+   <textarea rows="5" ng-model="case.plan" ng-blur="updissuesplan(case.plan, case.issues, case.resident_id)"  style="background-color: lightblue;"></textarea>   
+</md-input-container>
+    </md-content>
+  </div>
+
+  <div flex="20">
+    <md-toolbar layout="row" class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <span><b>  Notes</b></span>
+      </div>
+    </md-toolbar>
+    <md-content>
+      <md-list flex>
+      <br />
+<md-list-item style="color: black;">
+      <span style="" ng-hide="!case"> <textarea style="background-color: #ffffe6; width: 600px; color: black;" ng-model="noteadd" ng-blur="addanote()" placeholder="Add a Note"></textarea></span>
+    </md-list-item>
+
+      	<md-list-item ng-repeat="act in actions track by $index">
+      	<textarea ng-model="act.Action_taken" ng-blur="editnote(act.id, act.Action_taken)" style="width: 100%; color: black;"></textarea>
+        </md-list-item>
+        <md-divider ></md-divider>
+       </md-list>
+           </md-content>
+  </div>
+
+  <div flex="20">
+    <md-toolbar layout="row" class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <span>Contact</span>
+      </div>
+    </md-toolbar>
+    <md-content>
+           </md-content>
+  </div>
+
+    <div flex="20">
+    <md-toolbar layout="row" class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <span>Plan</span>
+      </div>
+    </md-toolbar>
+    <md-content>
+           </md-content>
+    </div>
+
+
+
+</div>
+
+      </md-tab>
+
+
+
+
+      <md-tab label="Add New Case">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Add New Case</h1>
+
+<div layout="column" flex="50"  style="background-color:#e0e0eb; border: solid black 2px; margin-right: 10px; padding-left: 15px;">
+  <div layout-gt-sm="row">
+	 <md-input-container class="md-block" flex-gt-sm flex="30">
+        <label>First Name</label>
+        <input ng-model="case.cfname">
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm flex="5">
+        <label>MI</label>
+        <input ng-model="case.cmi">
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm flex="50">
+        <label>Last Name</label>
+        <input ng-model="case.clname">
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm flex="15">
+  <label>Ext.</label>
+  <md-select ng-model="someModel">
+    <md-option ng-value="ext" ng-repeat="ext in exts">{{ ext }}</md-option>
+  </md-select>
+      </md-input-container>      
+</div>
+
+	 <md-input-container class="md-block" layout-fill flex-gt-sm flex="30			">
+        <label>Caseworker</label>
+        <input ng-model="case.caseworker">
+      </md-input-container>
+
+	 <md-input-container class="md-block" flex-gt-sm flex="30">
+        <label>Facility</label>
+        <input ng-model="case.cfname">
+      </md-input-container>
+      <div class="md-block" flex-gt-sm flex="40">
+        <label>Admission Date</label>
+   <md-datepicker ng-model="case.admit_date" md-placeholder="Enter date"></md-datepicker>
+   		</div>
+</div>
+        </md-content>
+      </md-tab>
+
+
+
+      <md-tab label="CAO Workers">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Three</h1>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>      
+      <md-tab label="SNFs">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Three</h1>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+
+
+    </md-tabs>
+  </md-content>
+</div>

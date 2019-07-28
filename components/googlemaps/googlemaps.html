@@ -1,0 +1,77 @@
+<style>
+#map  {
+	height: 600px;
+	width: 100%;
+}
+</style>
+<div ng-cloak>
+
+
+<div layout="row">
+<div flex="15">
+	<div style="background-color: darkblue; color: white;padding: 10px;width: 200px;magin: auto; text-align: center;">
+		<label style="display: block;margin-top: 15px;"><b>Select a County</b></label>
+
+		<select ng-options="c as c.countyname for c in counties" style="height: 29px;" ng-model="county" ng-change="getsnfs()" ng-click="clearf()"></select>
+		<md-button ng-click="getsnfs()" class="md-raised">Fetch</md-button>
+			<label style="display: block;">Filter</label>
+			<input ng-model="query">
+
+   	</div>
+		<ul style="list-style: none;">
+ 			<li ng-repeat="snf in snfs | filter : query"  ng-click="getsinglesnf(snf, 12)">
+				<label >{{snf.provider_name}}</label> 
+	        	<table>
+	        		<tr><td>{{snf.provider_address}}</td></tr>
+	        	<tr><td> {{snf.provider_city}} {{snf.provider_state}}, {{snf.provider_zip_code}}</td></tr>
+	        	<tr><td>{{snf.provider_phone_number.phone_number}}</td></tr>
+	        </table>
+			<hr />
+  			</li>
+
+   		</ul>
+
+</div>
+<div flex="25" ng-if="snf">
+
+<table>
+<tr><th colspan="2" align="center">{{snf.provider_name}}</th></tr>
+<tr><td colspan="2" align="center">{{snf.provider_address}}</td></tr>
+<tr><td colspan="2" align="center">{{snf.provider_city}}, {{snf.provider_state}}  {{snf.provider_zip_code}}</td></tr>
+<tr><td colspan="2" align="center">{{snf.provider_phone_number.phone_number}}</td></tr>
+<tr><td colspan="2" align="center">{{snf.provider_county_name}} County</td></tr>
+<tr><td>Report Date</td><td>{{snf.processing_date | date : 'shortDate'}}</td></tr>
+<tr><td>Owner type</td><td>{{snf.ownership_type}}</td></tr>
+<tr><td>CCRC</td><td>{{snf.continuing_care_retirement_community}}</td></tr>
+<tr><td>FPN</td><td>{{snf.federal_provider_number}}</td></tr>
+
+<tr><td>Overall Rating</td><td>{{snf.overall_rating}} out of 5 stars.</td></tr>
+<tr><td>Health Insp. Rating</td><td>{{snf.health_inspection_rating}} out of 5 stars.</td></tr>
+<tr><td>Quality Rating</td><td>{{snf.qm_rating}} out of 5 stars.</td></tr>
+<tr><td>RN Staff Rating</td><td>{{snf.rn_staffing_rating}} out of 5 stars.</td></tr>
+<tr><td>Staffing Rating</td><td>{{snf.staffing_rating}} out of 5 stars.</td></tr>
+
+<tr><td>No. Certified Beds</td><td>{{snf.number_of_certified_beds}}</td></tr>
+<tr><td>No. Residents</td><td>{{snf.number_of_residents_in_certified_beds}}</td></tr>
+
+<tr><td>No. Incidents Reported</td><td>{{snf.number_of_facility_reported_incidents}}</td></tr>
+<tr><td>No. Fines</td><td>{{snf.number_of_fines}}</td></tr>
+<tr><td>No. Payment Denials</td><td>{{snf.number_of_payment_denials}}</td></tr>
+<tr><td>No. Substantiated Complaints</td><td>{{snf.number_of_substantiated_complaints}}</td></tr>
+<tr><td>Fines Amounts</td><td>{{snf.total_amount_of_fines_in_dollars | currency}}</td></tr>
+<tr><td>Penalties</td><td>{{snf.total_number_of_penalties}}</td></tr>
+
+
+<tr><td>In Hospital?</td><td>{{snf.provider_resides_in_hospital}}</td></tr>
+<tr><td>Medicaid?</td><td>{{snf.provider_type}}</td></tr>
+</table>
+</div>
+
+<div flex="60" ng-if="showmap">
+<div id="map"></div>
+<div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+	<a id="snflocation" href="#" ng-click="openInfoWindow($event, marker)">
+	<label id="names"> {{marker.title}}</label></a> 
+</div>
+
+</div>

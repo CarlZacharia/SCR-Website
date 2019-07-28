@@ -1,0 +1,157 @@
+<style>
+label {
+  text-align: left;
+}
+input {
+  padding: 4px;
+  margin: 4px;
+  background-color: wheat ;
+}
+md-dialog.fullscreen-dialog {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+._md-select-value {
+  background-color: wheat;
+  width: 195px;
+}
+</style>
+<md-dialog class="fullscreen-dialog">
+ <md-dialog-content class="autoScroll">
+   <div layout="column" flex >
+          <h3>{{appt.summary}}</h3>
+          <h5 ng-if="activecase">Client: {{activecase.fname}} {{activecase.lname}}</h5>
+          <h5 ng-if="activecase">Contact: {{activecase.cfname}} {{activecase.clname}}</h5>          
+          <h5>{{activecase.casetype}}</h5>   
+          <h5>{{activecase.casestatus}}</h5>                   
+          <p>
+            <label style="display: block; text-align: left; font-size: 18px;">Description   -   {{appt.appt_date | date : 'EEEE  MMMM dd, yyyy'}}   -   {{appt.appt_date | date : 'h:mm a'}}</label>
+            <div style="text-align: left; color: darkblue; margin: 10px;">{{appt.apptnotes}}</div>
+         </p>
+         <md-divider></md-divider>
+         <div layout="row" >
+            <div flex>
+              <md-input-container>
+              <label>Meeting Type</label>
+                <md-select ng-model="appt.meetingtype" placeholder="Meeting Type">
+                  <md-option ng-value="mtg" ng-repeat="mtg in meetingtypes">{{ mtg }}</md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+            <div flex ng-if="appt.meetingtype !='New Case'">
+              <md-input-container md-no-float>
+             <label>Case LookUp</label>    
+                <input type="text" ng-model="query" style="background-color: white;" placeholder="Enter Last Name" ng-change="lookupcase(query)"md-no-float>
+ 
+                    <ul style="list-style: none;text-align: left;">
+                      <li ng-repeat="c in cases track by $index">
+                        <button ng-click="markCaseData(c)" style="width: 100%; background-color:yellow; color: darkblue;padding: 5px;">{{c.fname}} {{c.lname}} <br /> {{c.casetype}}</button></label> 
+                        <md-divider></md-divider>
+                      </li>
+                    </ul>
+             </md-input-container> 
+            </div>            
+            <div flex>
+               <md-input-container>
+              <label>Case Type</label>  
+                <md-select ng-model="appt.casetype" placeholder="Case Type">
+                  <md-option ng-value="cs" ng-repeat="cs in casetypes">{{ cs }}</md-option>
+                </md-select>
+              </md-input-container>                          
+            </div>
+            <div flex>
+              <md-input-container>
+               <label>Office Location  </label>
+                <md-select ng-model="appt.office" placeholder="Office">
+                  <md-option ng-value="o" ng-repeat="o in offices">{{ o }}</md-option>
+                </md-select>
+              </md-input-container>                          
+            </div>       
+           <div flex>
+              <md-input-container>
+               <label>Referral</label>
+                <input type="text" ng-model="appt.referredby" style="background-color: wheat;" placeholder="Referral">
+              </md-input-container>                          
+            </div>        
+            <div flex>
+              <md-input-container>
+               <label>Fee Quote</label>
+                <input type="text" ng-model="appt.fee" style="background-color: wheat;" placeholder="Fee Quote">
+              </md-input-container>                          
+            </div>                              
+            </div>
+            <md-divider></md-divider>
+
+         </div>
+    <div layout="row" style="margin: 0px; 5px; padding: 20px;">
+        <div layout="column" flex="20">
+            <label align="left">Primary Contact</label>
+            <div layout="row">
+              <input flex ng-model="appt.cfname" placeholder="Contact First Name">
+              <input flex ng-model="appt.clname" placeholder="Contact Last Name"> 
+              </div>             
+            <label>Address</label>
+            <input ng-model="appt.caddress">                 
+            <label>City State Zip</label>
+            <input ng-model="appt.ccsz">                  
+            <label>Telephone</label>
+            <input ng-model="appt.telephone">                
+            <label>Email</label>
+            <input ng-model="appt.email">                                
+        </div>              
+        <div flex="10">
+            <label align="left">Also Present</label>
+              <textarea style="width: 95%; height: 95%; background-color: wheat;" ng-model="appt.presentat"></textarea>
+        </div>
+        <div layout="column" flex="20">
+            <label align="left">Client</label>
+            <div layout="row">
+              <input flex ng-model="appt.fname" placeholder="Client First Name">
+              <input flex ng-model="appt.lname" placeholder="Client Last Name"> 
+              </div>                         
+            <label>Address</label>
+            <input ng-model="appt.address">                 
+            <label>City State Zip</label>
+            <input ng-model="appt.csz">                  
+            <label>Facility</label>
+            <input ng-model="appt.facility">                
+            <label>Admit Date</label>
+            <input type="date" ng-model="appt.facilityadmitdate">                                
+        </div>              
+        <div flex="20">
+            <label align="left">Notes</label>
+              <textarea style="width: 95%; height: 48%; background-color: wheat;" ng-model="appt.postmtgnotes"></textarea>
+            <label align="left">Issues</label>
+              <textarea style="width: 95%; height: 48%; background-color: wheat;" ng-model="appt.issues"></textarea>
+        </div>        
+        <div layout="column" flex="20">
+            <h5 align="left">Client to Provide</h5>
+              <textarea style="width: 95%; height: 70%; background-color: wheat;" ng-model="appt.clienttodo"></textarea>
+            <h5 align="left">Todo</h5>
+              <textarea style="width: 95%; height: 35%; background-color: wheat;" ng-model="appt.todo"></textarea>
+              <label>Due Date</label>
+              <input type="date" ng-model="duedate">
+        </div>                
+
+    </div>
+
+
+</md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button  md-autofocus ng-click="cancel()" class="md-raised md-warn" ng-mouseOver="t()">
+        Cancel
+      </md-button>
+      <span flex></span>
+      <div layout="row">
+        <md-checkbox ng-model="appt.createnewcase" ng-if="appt.meetingtype == 'New Case'">Create New Case?</md-checkbox>
+      <md-button ng-click="saveappt(appt)" class="md-raised md-primary">
+        Save
+      </md-button>
+    </div>
+
+    </md-dialog-actions>
+</md-dialog>

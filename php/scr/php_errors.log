@@ -1,0 +1,589 @@
+[09-Jun-2016 13:53:08 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:08 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:08 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:09 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:12 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:13 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:15 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:18 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:32 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:32 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:34 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:35 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:37 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:38 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:53:39 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:56:42 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:56:42 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:56:42 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:56:44 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:57:20 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:57:21 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:57:22 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:57:27 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[09-Jun-2016 13:57:28 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 23
+[13-Jun-2016 11:41:21 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in D:\home\maapps.com\wwwroot\scr\php\scr\scr_addanote.php on line 37
+[21-Jun-2016 08:47:53 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcases.php on line 19
+[28-Jun-2016 07:52:29 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 35
+[28-Jun-2016 07:55:44 America/Chicago] PHP Parse error:  syntax error, unexpected 'Database' (T_STRING) in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 45
+[28-Jun-2016 07:57:59 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 35
+[28-Jun-2016 08:12:38 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 37
+[28-Jun-2016 08:17:39 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 38
+[28-Jun-2016 08:18:52 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 40
+[28-Jun-2016 08:24:45 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 28
+[28-Jun-2016 08:24:45 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 29
+[28-Jun-2016 08:24:45 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 42
+[28-Jun-2016 08:26:09 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 28
+[28-Jun-2016 08:26:09 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 29
+[28-Jun-2016 08:26:09 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 42
+[28-Jun-2016 08:37:24 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 28
+[28-Jun-2016 08:37:24 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 29
+[28-Jun-2016 08:37:24 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 42
+[28-Jun-2016 08:46:23 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 28
+[28-Jun-2016 08:46:23 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 29
+[28-Jun-2016 08:46:23 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 42
+[28-Jun-2016 08:50:31 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 28
+[28-Jun-2016 08:50:31 America/Chicago] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 29
+[28-Jun-2016 08:50:31 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 42
+[28-Jun-2016 09:19:07 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 43
+[28-Jun-2016 10:20:18 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 37
+[28-Jun-2016 10:28:59 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 37
+[28-Jun-2016 10:41:16 America/Chicago] PHP Parse error:  syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING), expecting '}' in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 39
+[28-Jun-2016 10:41:35 America/Chicago] PHP Parse error:  syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING), expecting '}' in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 39
+[28-Jun-2016 15:46:11 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 39
+[28-Jun-2016 15:49:29 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 39
+[28-Jun-2016 16:13:15 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_updcasedata.php on line 18
+[29-Jun-2016 08:05:34 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_updcasedata.php on line 18
+[29-Jun-2016 13:00:15 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 40
+[29-Jun-2016 13:16:06 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_updcasedata.php on line 18
+[29-Jun-2016 14:35:07 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 40
+[29-Jun-2016 14:57:42 America/Chicago] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in D:\home\maapps.com\wwwroot\scr\php\scr\scr_savenewclientdata.php on line 40
+[29-Jun-2016 15:34:49 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_updcasedata.php on line 18
+[29-Jun-2016 15:35:55 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in D:\home\maapps.com\wwwroot\scr\php\scr\scr_updcasedata.php on line 18
+[02-Aug-2017 09:10:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:07 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:07 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:08 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:08 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:41 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:42 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:47 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:10:47 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:10:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:50 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:51 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:10:51 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:10:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:11:00 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:11:26 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getrejects.php on line 10
+[02-Aug-2017 09:11:26 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodosmain.php on line 11
+[02-Aug-2017 09:11:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:11:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:11:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:11:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:11:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:11:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:11:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:11:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:11:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:11:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:11:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:11:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:11:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:12:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:12:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:12:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:12:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:12:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:12:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:12:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:12:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:12:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:12:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:12:08 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:12:09 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:12:55 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getrejects.php on line 10
+[02-Aug-2017 09:12:55 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodosmain.php on line 11
+[02-Aug-2017 09:12:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:12:59 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:13:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:13:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:13:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:13:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:13:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:13:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:13:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:13:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:13:08 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:13:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcase.php on line 11
+[02-Aug-2017 09:13:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:13:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodos.php on line 11
+[02-Aug-2017 09:13:38 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcase.php on line 11
+[02-Aug-2017 09:13:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:13:39 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodos.php on line 11
+[02-Aug-2017 09:14:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:14:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:15:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:15:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:18:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:18:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:18:53 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:18:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodosmain.php on line 11
+[02-Aug-2017 09:18:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getrejects.php on line 10
+[02-Aug-2017 09:19:12 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:19:12 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:19:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:19:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:19:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:19:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:19:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:19:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:19:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:19:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:19:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:19:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:19:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:19:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:19:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:19:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:19:36 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:26:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodosmain.php on line 11
+[02-Aug-2017 09:26:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getrejects.php on line 10
+[02-Aug-2017 09:26:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:26:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:27:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[02-Aug-2017 09:27:04 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[02-Aug-2017 09:30:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:30:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:30:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:30:30 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:30:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:30:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:31:02 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:31:02 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[02-Aug-2017 09:31:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[02-Aug-2017 09:31:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[07-Aug-2017 08:27:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:17 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:20 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:21 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:22 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:22 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:24 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:24 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:29 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:33 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:35 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:36 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:36 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:36 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:27:36 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:27:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getrejects.php on line 10
+[07-Aug-2017 08:27:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodosmain.php on line 11
+[07-Aug-2017 08:28:01 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcatcases.php on line 10
+[07-Aug-2017 08:28:01 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcws.php on line 7
+[07-Aug-2017 08:28:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:05 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:06 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[07-Aug-2017 08:28:16 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[07-Aug-2017 08:28:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getcase.php on line 11
+[05-Sep-2017 12:18:49 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getrejects.php on line 10
+[05-Sep-2017 12:18:49 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\home\maapps.com\wwwroot\scr\php\scr\scr_gettodosmain.php on line 11
+[22-Dec-2017 08:38:45 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[22-Dec-2017 08:38:45 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[22-Dec-2017 08:38:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[22-Dec-2017 08:38:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[22-Dec-2017 08:38:46 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[22-Dec-2017 08:38:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11
+[22-Dec-2017 08:38:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_findacase.php on line 10
+[22-Dec-2017 08:38:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in D:\home\maapps.com\wwwroot\scr\php\scr\scr_getactions.php on line 11

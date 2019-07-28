@@ -1,0 +1,503 @@
+<style>
+input[type="text"] {
+	margin: 12px;
+	color: darkblue;
+	background-color: lightblue;
+}
+input[type="number"] {
+	margin: 12px;
+	color: darkblue;
+	background-color: lightblue;
+}
+select{
+	margin: 12px;	
+	width: 189px;
+	height: 25px;
+	color: darkblue;
+	background-color: lightblue;
+}
+label {
+	margin: 12px 0px 0px 12px;
+}
+</style>
+
+<div ng-cloak>
+
+<md-tabs md-dynamic-height md-border-bottomc md-selected="selectedTab" style="margin-left:50px;padding: 50px;">
+
+
+	<md-tab label="POAs">
+	<div layout="row" style="padding: 10px;background-color: darkblue;">
+	<div layout="column" style="background-color: #F1E2AB;margin: 20px;">
+	<div style="text-align: center;"><h3>Pa - 1 POA, 1 Alt</h3></div>
+	<form method="post" action="php/docs/papoa2gen.php">
+	<label style="display: block;">Principal Name</label>
+	<input name="pname" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Primary Agent Name</label>
+	<input name="a1name" ng-model="a1name" type="text"  ng-blur="pophc1()">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Agent Name</label>
+	<input name="a2name" ng-model="a2name" type="text" ng-blur="pophc2()">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Primary HC Agent Name</label>
+	<input name="hca1name" ng-model="hca1name" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. HC Agent Name</label>
+	<input name="hca2name" ng-model="hca2name" type="text">
+
+	<md-divider></md-divider>
+
+
+	<label style="display: block;">Attorney</label>
+	<select name="atty">
+		<option ng-repeat="x in attys">{{x}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<label style="display: block;">County of Residence</label>
+	<select name="countyres">
+		<option ng-repeat="c in county">{{c}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+<div layout="column" style="background-color: #DFFFC0;margin: 20px;">
+		<div style="text-align: center;"><h3>Pa - 1 POA, 2 Alt</h3></div>
+	<form method="post" action="php/docs/papoa3gen.php">
+	<label style="display: block;">Principal Name</label>
+	<input name="pname" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Primary Agent Name</label>
+	<input name="a1name" ng-model="a1name3" type="text"  ng-blur="pop3hc1()">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Agent Name</label>
+	<input name="a2name" ng-model="a2name3" type="text" ng-blur="pop3hc2()">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Second Agent Name</label>
+	<input name="a3name" ng-model="a3name3" type="text" ng-blur="pop3hc3()">
+
+	<md-divider></md-divider>	
+
+	<label style="display: block;">Primary HC Agent Name</label>
+	<input name="hca1name" ng-model="hca1name3" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. HC Agent Name</label>
+	<input name="hca2name" ng-model="hca2name3" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Second HC Agent Name</label>
+	<input name="hca3name" ng-model="hca3name3" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Attorney</label>
+	<select name="atty">
+		<option ng-repeat="x in attys">{{x}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<label style="display: block;">County of Residence</label>
+	<select name="countyres">
+		<option ng-repeat="c in county">{{c}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+	<div layout="column" style="background-color: #F1E2AB;margin: 20px;">
+	<div style="text-align: center;"><h3>Florida POA</h3></div>
+	<form method="post" action="php/docs/flapoa2gen.php">
+	<label style="display: block;">Principal Name</label>
+	<input name="pname" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Primary Agent Name</label>
+	<input name="fa1name" ng-model="fa1name" type="text"  ng-blur="fpophc1()">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Agent Name</label>
+	<input name="fa2name" ng-model="fa2name" type="text" ng-blur="fpophc2()">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Primary HC Agent Name</label>
+	<input name="fhca1name" ng-model="fhca1name" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. HC Agent Name</label>
+	<input name="fhca2name" ng-model="fhca2name" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">County of Residence</label>
+	<input name="countyres" ng-model="countyres" type="text">
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+</div>
+
+	</md-tab>
+	<md-tab label="Pa Wills">
+	<div layout="row" style="padding: 10px;background-color: darkblue;" >	
+	<div flex layout="column" style="background-color: #DFFFC0;margin: 20px;" flex="33">
+		<div style="text-align: center;"><h3>Pa. Single Male Will</h3></div>
+	<form method="post" action="php/docs/willmalesinglegen.php">
+	<label style="display: block;">Name</label>
+	<input name="husband" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Primary Executor</label>
+	<input name="a1namem"  type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Executor</label>
+	<input name="a2namem" type="text" >
+	<md-divider></md-divider>
+
+	<label style="display: block;">No. Children</label>
+	<input name="nochildren" ng-model="nochildren" type="number" width="120px;">
+	<md-divider></md-divider>	
+
+	<label style="display: block;" >Childrens Names</label>
+	<label style="display: block;" ng-if="nochildren == 1">Childs Name</label>
+	<label style="display: block;" ng-if="nochildren == 0">Residuary Heirs Names</label>		
+	<input name="heirs" ng-model="heirs" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Attorney</label>
+	<select name="atty">
+		<option ng-repeat="x in attys">{{x}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<label style="display: block;">County of Residence</label>
+	<select name="countyres">
+		<option ng-repeat="c in county">{{c}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+
+
+<div flex layout="column" style="background-color: pink;margin: 20px;" flex="33">
+		<div style="text-align: center;"><h3>Pa Single Female Will</h3></div>
+	<form method="post" action="php/docs/willfemalesinglegen.php">
+
+	<label style="display: block;">Name</label>
+	<input name="wife" type="text">
+	<md-divider></md-divider>	
+
+	<label style="display: block;">Primary Executor</label>
+	<input name="a1namef" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Executor</label>
+	<input name="a2namef"  type="text" >
+	<md-divider></md-divider>
+
+	<label style="display: block;">No. Children</label>
+	<input name="nochildren" ng-model="nochildren" type="number" width="120px;">
+	<md-divider></md-divider>	
+
+	<label style="display: block;" >Childrens Names</label>
+	<label style="display: block;" ng-if="nochildren == 1">Childs Name</label>
+	<label style="display: block;" ng-if="nochildren == 0">Residuary Heirs Names</label>		
+	<input name="heirs" ng-model="heirs" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Attorney</label>
+	<select name="atty">
+		<option ng-repeat="x in attys">{{x}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<label style="display: block;">County of Residence</label>
+	<select name="countyres">
+		<option ng-repeat="c in county">{{c}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+
+
+<div flex layout="column" style="background-color: lightblue;margin: 20px;" flex="33">
+		<div style="text-align: center;"><h3>Pa Married Couple Will</h3></div>
+	<form method="post" action="php/docs/willmarriedgen.php">
+	<label style="display: block;">Husband</label>
+	<input name="husband" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Wife</label>
+	<input name="wife" type="text">
+	<md-divider></md-divider>	
+
+	<label style="display: block;">Primary Executor</label>
+	<input name="a1name"  type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Executor</label>
+	<input name="a2name" type="text" >
+	<md-divider></md-divider>
+
+	<label style="display: block;">No. Children</label>
+	<input name="nochildren" ng-model="nochildren" type="number" width="120px;">
+	<md-divider></md-divider>	
+
+	<label style="display: block;" >Childrens Names</label>
+	<label style="display: block;" ng-if="nochildren == 1">Childs Name</label>
+	<label style="display: block;" ng-if="nochildren == 0">Residuary Heirs Names</label>		
+	<input name="heirs" ng-model="heirs" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Attorney</label>
+	<select name="atty">
+		<option ng-repeat="x in attys">{{x}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<label style="display: block;">County of Residence</label>
+	<select name="countyres">
+		<option ng-repeat="c in county">{{c}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+
+	
+</div><!--End of Row-->
+	</md-tab>
+	<md-tab label="Florida Docs">
+<div layout="row" style="padding: 10px;background-color: darkblue;" >
+	<div flex layout="column" style="background-color: #DFFFC0;margin: 20px;" flex="33">
+	<div style="text-align: center;"><h3>Fla. Single Male Will</h3></div>
+	<form method="post" action="php/docs/Fla-willmalesinglegen.php">
+	<label style="display: block;">Name</label>
+	<input name="husband" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Primary Executor</label>
+	<input name="a1namem"  type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Executor</label>
+	<input name="a2namem" type="text" >
+	<md-divider></md-divider>
+
+	<label style="display: block;">No. Children</label>
+	<input name="nochildren" ng-model="nochildren" type="number" width="120px;">
+	<md-divider></md-divider>	
+
+	<label style="display: block;" >Childrens Names</label>
+	<label style="display: block;" ng-if="nochildren == 1">Childs Name</label>
+	<label style="display: block;" ng-if="nochildren == 0">Residuary Heirs Names</label>		
+	<input name="heirs" ng-model="heirs" type="text">
+	<md-divider></md-divider>
+
+
+	<label style="display: block;">County of Residence</label>
+		<input name="countyres" ng-model="countyres" type="text">
+	<md-divider></md-divider>
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+
+
+<div flex layout="column" style="background-color: pink;margin: 20px;" flex="33">
+		<div style="text-align: center;"><h3>Fla Single Female Will</h3></div>
+	<form method="post" action="php/docs/Fla-willfemalesinglegen.php">
+
+	<label style="display: block;">Name</label>
+	<input name="wife" type="text">
+	<md-divider></md-divider>	
+
+	<label style="display: block;">Primary Executor</label>
+	<input name="a1namef" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Executor</label>
+	<input name="a2namef"  type="text" >
+	<md-divider></md-divider>
+
+	<label style="display: block;">No. Children</label>
+	<input name="nochildren" ng-model="nochildren" type="number" width="120px;">
+	<md-divider></md-divider>	
+
+	<label style="display: block;" >Childrens Names</label>
+	<label style="display: block;" ng-if="nochildren == 1">Childs Name</label>
+	<label style="display: block;" ng-if="nochildren == 0">Residuary Heirs Names</label>		
+	<input name="heirs" ng-model="heirs" type="text">
+	<md-divider></md-divider>
+
+
+	<label style="display: block;">County of Residence</label>
+		<input name="countyres" ng-model="countyres" type="text" >
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+
+
+
+<div flex layout="column" style="background-color: lightblue;margin: 20px;" flex="33">
+		<div style="text-align: center;"><h3>Fla Married Couple Will</h3></div>
+	<form method="post" action="php/docs/Fla-willmarriedgen.php">
+	<label style="display: block;">Husband</label>
+	<input name="husband" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Wife</label>
+	<input name="wife" type="text">
+	<md-divider></md-divider>	
+
+	<label style="display: block;">Primary Executor</label>
+	<input name="a1name"  type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">Alt. Executor</label>
+	<input name="a2name" type="text" >
+	<md-divider></md-divider>
+
+	<label style="display: block;">No. Children</label>
+	<input name="nochildren" ng-model="nochildren" type="number" width="120px;">
+	<md-divider></md-divider>	
+
+	<label style="display: block;">Childrens Names</label>
+	<label style="display: block;" ng-if="nochildren == 1">Childs Name</label>
+	<label style="display: block;" ng-if="nochildren == 0">Residuary Heirs Names</label>		
+	<input name="heirs" ng-model="heirs" type="text">
+	<md-divider></md-divider>
+
+	<label style="display: block;">County of Residence</label>
+		<input name="countyres" ng-model="countyres" type="text">
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+</div>
+	</md-tab>
+	
+
+
+	<md-tab label="Trusts">
+
+	</md-tab>		
+
+
+
+
+
+
+	<md-tab label="Other">
+
+	</md-tab>		
+
+
+
+
+
+
+
+
+
+
+
+	<md-tab label="Fee Agreements">
+	<div layout="column" style="background-color: #DFFFC0;">
+	<div style="text-align: center;"><h3>ELM App Fee Agree</h3></div>
+	<form method="post" action="php/docs/elmappgen.php">
+	<label style="display: block;">Contact</label>
+	<input name="addressee" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Client Name</label>
+	<input name="clientname" ng-model="clientname" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">Address</label>
+	<input name="add1" type="text" ng-model="add1">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">City State Zip</label>
+	<input name="csz" ng-model="csz" type="text">
+
+	<md-divider></md-divider>	
+
+	<label style="display: block;">Salutation</label>
+	<input name="sal" ng-model="sal" type="text">
+
+	<md-divider></md-divider>
+
+	<label style="display: block;">fee</label>
+	<input name="fee" ng-model="fee" type="text">
+
+	<md-divider></md-divider>
+
+
+	<label style="display: block;">Attorney</label>
+	<select name="atty">
+		<option ng-repeat="x in attys">{{x}}</option>
+	</select>
+	<md-divider></md-divider>
+
+	<input class="md-primary md-raised" role="button" type="submit" >
+
+</form>
+</div>
+</div>	
+	</md-tab>
+
+</md-tabs>
+</div>

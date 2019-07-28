@@ -1,0 +1,44 @@
+  <md-dialog aria-label="{{dcase.first_name}} {{dcase.last_name}}">
+  <form>
+  
+    <md-dialog-content style="width:500px;  padding: 6px; margin: 10px;">
+<div layout="column" flex style="padding: 12px;">
+    <h3>Add ToDo for {{dcase.first_name}} {{dcase.last_name}} </h3>
+    <p>
+    <label style="display: block;">Description</label>
+    <input type="text" style="width: 100%; background-color: wheat;" ng-model="note.task" placeholder="Enter New Task or Todo">
+ </p>
+ <p>
+     <label style="display: block;">Due Date</label>
+    <input type="date" style=" background-color: wheat;width: 40%;" ng-model="note.duedate">
+  </p>
+    <p>
+  <md-checkbox
+              ng-model="note.priority"
+              aria-label="Priority"
+              ng-true-value="1"
+              ng-false-value="0">Priority?</md-checkbox>
+</p>
+ 
+<md-radio-group ng-model="note.todowait" layout="row">
+<md-radio-button ng-model="note.todowait" name="todowait" value="Todo">Todo</md-radio-button>
+<md-radio-button ng-model="note.todowait" name="todowait" value="Await">Await</md-radio-button>
+</md-radio-group>
+</div>
+
+
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button  md-autofocus ng-click="hide()" class="md-raised md-warn">
+        Cancel
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="savenewtodo()" class="md-raised md-primary">
+        Save
+      </md-button>
+
+    </md-dialog-actions>
+  </form>
+</md-dialog>

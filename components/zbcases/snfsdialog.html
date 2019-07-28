@@ -1,0 +1,18 @@
+<md-dialog >
+      <div layout="column" flex style="margin: -15px 10px; border: black solid 2px; padding: 5px; width: 100%; min-height: 400px;">
+      <span style="padding: 10px; margin-top: 20PX;"><label>Find a SNF</label>  <input style="padding: 6px 10px 6px 10px; width:100px;" type="text" autofocus ng-model="query"  ng-click="clearsnfs()"></span>
+  <div flex>
+    <ul style="list-style-type: none;" ng-repeat="s in snfs | filter : query">
+      <li   ng-click="getasnf(s)">
+        <div layout="column">
+          <a href="" ng-click="getsnf(s)">
+          <div flex>{{s.name}}</div>
+          <div flex>{{s.county}}</div></a>
+          <div flex>{{s.telephone}}</div>
+          <div flex>FIN: {{s.FIN}}</div>
+        </div>
+      </li>
+    </ul>
+      </div>    
+    </div>
+</md-dialog>

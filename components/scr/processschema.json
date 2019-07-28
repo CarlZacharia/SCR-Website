@@ -1,0 +1,32 @@
+{
+	"current":"New",
+	"level":1,
+	"stage1": {
+		"date_new": "",
+		"date_new_notes": [],
+		"date_filed": "",
+		"date_filed_notes": [],
+		"date_pending": "",
+		"date_pending_notes": []
+	},
+		"stage2": {
+			"date_approved": "",
+			"date_approved_notes": [],
+			"date_rejected": "",
+			"date_rejected_notes": []
+	},
+		"stage3": {
+			"date_appealled": "",
+			"date_appealled_notes": [],
+			"date_withdrawn": "",
+			"date_withdrawn_notes": []
+	},
+		"stage4": {
+			"date_hearing": "",
+			"date_hearing_notes": [],
+			"date_appeal_approved": "",
+			"date_appeal_approved_notes": [],
+			"date_appeal_lost": "",
+			"date_appeal_lost_notes": []
+	}
+}

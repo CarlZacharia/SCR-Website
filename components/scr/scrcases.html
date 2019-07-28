@@ -1,0 +1,1231 @@
+        <style>
+        .tabsdemoDynamicHeight md-content {
+          background-color: transparent !important; }
+          .tabsdemoDynamicHeight md-content md-tabs {
+            background: #f6f6f6;
+            border: 1px solid #e1e1e1; }
+            .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+              background: #fcf9f8; }
+          .tabsdemoDynamicHeight md-content h1:first-child {
+            margin-top: 0; }
+            input[type=text] { border-bottom: black solid 1px; border-left: black solid 1px; border-right: black solid 1px;}
+
+        .tdr {
+          padding-right: 2px; 
+          text-align: right;
+        }
+        .popupContainer {
+          width: 800px !important;
+        }
+        table td {
+          padding: 6px;
+        }
+        td > input[type='text']
+        {
+          background-color: #fcf9f8;
+          font-weight: bold;
+          color: black;
+            padding: 4px;
+        }
+        td > input[type='date']
+        {
+          background-color: #fcf9f8;
+          font-weight: bold;
+          color: black;
+            padding: 4px;
+        }
+    input[type=text], input[type=date], select {
+      padding: 4px;
+      font-weight: bold;
+      color: dark#5784D7;
+    }
+    input[type=date]{
+      height: 19px;
+      padding: 4px;
+      font-weight: bold;
+      color: dark#5784D7;
+    }
+
+    input[type=range] {
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+      width: 100%; /* Specific width is required for Firefox. */
+      background: transparent; /* Otherwise #F5FFA5 in Chrome */
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+
+    input[type=range]:focus {
+      outline: none; /* Removes the #5784D7 border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
+
+    input[type=range]::-ms-track {
+      width: 100%;
+      cursor: pointer;
+
+      /* Hides the slider so custom styles can be added */
+      background: transparent; 
+      border-color: transparent;
+      color: transparent;
+    }
+    /* Special styling for WebKit/Blink */
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: 1px solid #000000;
+      height: 36px;
+      width: 16px;
+      border-radius: 3px;
+      background: #ffffff;
+      cursor: pointer;
+      margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+    }
+
+    /* All the same stuff for Firefox */
+    input[type=range]::-moz-range-thumb {
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      border: 1px solid #000000;
+      height: 36px;
+      width: 16px;
+      border-radius: 3px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    /* All the same stuff for IE */
+    input[type=range]::-ms-thumb {
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      border: 1px solid #000000;
+      height: 36px;
+      width: 16px;
+      border-radius: 3px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      background: #3071a9;
+      border-radius: 1.3px;
+      border: 0.2px solid #010101;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #367ebd;
+    }
+
+    input[type=range]::-moz-range-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      background: #3071a9;
+      border-radius: 1.3px;
+      border: 0.2px solid #010101;
+    }
+
+    input[type=range]::-ms-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      border-width: 16px 0;
+      color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+      background: #2a6495;
+      border: 0.2px solid #010101;
+      border-radius: 2.6px;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+    input[type=range]:focus::-ms-fill-lower {
+      background: #3071a9;
+    }
+    input[type=range]::-ms-fill-upper {
+      background: #3071a9;
+      border: 0.2px solid #010101;
+      border-radius: 2.6px;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+    input[type=range]:focus::-ms-fill-upper {
+      background: #367ebd;
+    }
+    .statusNotReady {
+      opacity: .25;
+    }
+    .tododonediv {
+     background-color:#f0e1E6;
+     opacity: .55;
+     text-decoration: line-through;
+    }
+    .tododone {
+      text-decoration: line-through;
+      background-color: #f0e1E6;      
+    }
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.anchortext {
+  font-size: 12px;
+}
+    </style>
+
+
+        <div ng-cloak>
+
+<!-- FIND CASE FETCH CASES-->
+
+
+         <span style="padding: 10px; margin-top: 20PX;"><label>Find a Case</label>  <input style="padding: 6px 10px 6px 10px; width:100px;" type="text" autofocus ng-model="findcase" ng-change="findacase()" ng-click="clearnewcases()"></span>CW: <input ng-model="tempuser" ng-blur="catcases()" ng-submit="catcases()" autofocus style="padding: 4px; text-align: center; font-weight: bolder; width: 60px;">
+         <md-button ng-click="catcases()">Fetch</md-button><md-button class="md-primary md-raised" ng-click="openAddNewCase()">Add a New Case</md-button>
+         <md-button ng-click="logout()"  class="md-warn md-raised">Log Out</md-button>
+
+<!-- CASE NAVIGATION TOOLS-->
+          <md-toolbar>
+            <div class="md-toolbar-tools">
+
+                     <md-button ng-click="showall()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="cases.length == 0">All [{{cases.length}}]</md-button>
+                      <md-button ng-click="shownew()" class="md-raised"  md-ink-ripple="#FF0000" ng-disabled="newcases.length == 0">New  [{{newcases.length}}]</md-button>
+                      <md-button ng-click="showfiled()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="filedcases.length == 0">Filed [{{filedcases.length}}]</md-button>
+                      <md-button ng-click="showpending()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="pendingcases.length == 0">Pending  [{{pendingcases.length}}]</md-button>
+                      <md-button ng-click="showrejected()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="rejectedcases.length == 0">Rejected [{{rejectedcases.length}}]</md-button>
+                      <md-button ng-click="showapproved()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="approvedcases.length == 0">Approved [{{approvedcases.length}}]</md-button>
+                      <md-button ng-click="showappealled()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="appealledcases.length == 0">Appealled [{{appealledcases.length}}]</md-button>
+                      <md-button ng-click="showproblem()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="problemcases.length == 0">Problem [{{problemcases.length}}]</md-button>
+                     <md-button ng-click="showpenalty()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="penaltycases.length == 0">Penalty [{{penaltycases.length}}]</md-button>
+                     <md-button ng-click="showwithdrawn()" class="md-raised" md-ink-ripple="#FF0000" ng-disabled="withdrawncases.length == 0">Withdrawn [{{withdrawncases.length}}]</md-button>
+                                                
+              </div>
+
+          </md-toolbar>
+  </div>
+
+
+<div layout="row">
+
+<!--CASE LISTING-->
+<div flex="15" layout = "column" ng-if="!case">
+  <span style="font-weight: bolder; margin-left: 10px; font-size: 1.5em;">{{listtype}}</span>
+    <md-content>
+      <md-list flex style="background-color: lightblue; border-radius: 10px; border: solid black 2px;">
+        <md-list-item ng-repeat="lc in listcases track by $index">
+        <md-button href="" ng-click="getcasedata(lc.resident_id)" >{{lc.first_name}} {{lc.last_name}}</md-button>
+        </md-list-item>
+        <md-divider ></md-divider>
+       </md-list>
+      </md-content>
+</div>
+
+
+<div flex="15"  ng-if="case">
+    <span style="display: block;">
+       {{case.first_name}} {{case.last_name}}
+    </span>
+    <span style="display: block;">
+        {{case.snfname}}
+    </span>
+    <span style="display: block;">
+        Admit Date: {{case.admit_date| date: 'shortDate'}}
+    </span>
+    <span style="display: block;">
+        Caseworker: {{case.caseworker}}
+    </span>
+    <span style="display: block;">
+        Case is {{mdadmit}} days old <div style="background-color: darkblue; color: yellow; display: block; padding: 10px 5px;text-align: center;border-radius: 15px; margin: 10px;">{{case.current_status}}</div>
+    </span>
+
+  <div flex layout="column">
+    <h3>To Dos</h3>
+    <md-button class="md-raised md-primary" ng-click="addTodo()">Add ToDo</md-button>
+  </div>
+
+    <md-list>
+        <md-list-item ng-repeat="t in todos track by $index" style="margin-bottom: 10px; font-size: 12px;  color: black; background-color: #8080ff; border: solid black 2px;"  ng-class="{'tododonediv': t.status != 'Pending'}">
+        <div layout="column" style="width: 100%; margin-top: 10px;" >
+        <textarea ng-model="t.task"  cols="40" rows="3" style="width:100%;font-size: 1em; margin-bottom: 5px; " readonly ng-click="edittodo(t)"></textarea>
+        
+      </div>
+        <md-divider ></md-divider>
+        </md-list-item>
+     </md-list>
+
+</div>
+
+
+<!-- CASE MAIN DATA COLUMNS-->
+
+    <div flex="85">
+
+        <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab label="Client" ng-if="case.last_name">
+
+           <div layout="row" >
+
+
+<!--CLIENT -->
+              <div flex="20" ng-if="case.last_name"  style="background-color:#DFE5E5;border: solid black 1px; padding: 8px;color: black; font-weight: bold; margin: 10px;border-radius: 5px;" layout="column">
+                <h3>Client</h3>
+                <label style="display: block; border-bottom: 2px black solid;">First Name</label>
+                <input type="text" ng-model="case.first_name" ng-blur="updcasedata('first_name', case.first_name, case.resident_id)">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Middle Name</label>
+                <input type="text" ng-model="case.middle_name"  ng-blur="updcasedata('middle_name', case.middle_name, case.resident_id)" style="width: 120px;">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Last Name</label>
+                <input type="text" ng-model="case.last_name" ng-blur="updcasedata('last_name', case.last_name, case.resident_id)">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Ext.</label>
+                <input type="text" ng-model="case.ext" ng-blur="updcasedata('ext', case.ext, case.resident_id)" style="width: 60px;">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">SSN</label>
+                <input type="text" ng-model="case.ssn"  ng-blur="updcasedata('ssn', case.ssn, case.resident_id)">
+
+                 <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Sex</label>
+                <div style="display: block;">
+                <md-radio-group ng-model="case.sex" layout="row">
+                  <md-radio-button name="sex" ng-model="case.sex" value="Male"  ng-click="updcasedata('sex', 'Male', case.resident_id)">Male</md-radio-button> 
+                  <md-radio-button name="sex" ng-model="case.sex" value="Female"  ng-click="updcasedata('sex', 'Female', case.resident_id)">Female</md-radio-button>
+                </md-radio-group>
+                </div>
+
+                <div layout="row">
+                  <div flex>
+                    <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">DOB</label>
+                    <input type="date" ng-model="case.dob"  ng-blur="updcasedata('dob', case.dob, case.resident_id)">
+                    Age: <span ng-if="case.res_age">{{case.res_age}}</span>
+                  </div>
+
+                </div>
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Marital</label>
+                <div style="display: block;">
+                  <md-radio-group ng-model="case.marital" layout="column" >
+                <md-radio-button name="marital" ng-model="case.marital" value="Single"  ng-click="updcasedata('marital', 'Single', case.resident_id)">Single </md-radio-button>
+                <md-radio-button name="marital" ng-model="case.marital" value="Married"  ng-click="updcasedata('marital', 'Married', case.resident_id)">Married</md-radio-button>
+                <md-radio-button name="marital" ng-model="case.marital" value="Widowed"  ng-click="updcasedata('marital', 'Widowed', case.resident_id)">Widowed </md-radio-button>
+                <md-radio-button name="marital" ng-model="case.marital" value="Divorced"  ng-click="updcasedata('marital', 'Divorced', case.resident_id)">Divorced</md-radio-button>
+                <md-radio-button name="marital" ng-model="case.marital" value="Separated"  ng-click="updcasedata('marital', 'Separated', case.resident_id)">Separated</md-radio-button>                
+              </md-radio-group>
+              </div>
+
+
+                <div  ng-show="case.marital=='Married'" layout="column">
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Spouse</label>
+                <input type="text" ng-model="case.spousename"  ng-blur="updcasedata('spousename', case.spousename, case.resident_id)">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Address</label>
+                <input type="text" ng-model="case.homeaddress"  ng-blur="updcasedata('homeaddress', case.homeaddress, case.resident_id)">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">City, State Zip</label>
+                <input type="text" ng-model="case.homecsz"  ng-blur="updcasedata('homecsz', case.homecsz, case.resident_id)">
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Telephone</label>
+                <input type="text" ng-model="case.hometelephone"  ng-blur="updcasedata('hometelephone', case.hometelephone, case.resident_id)">
+                </div>
+
+            </div>
+
+  
+<!-- CONTACT COLUMN-->
+
+            <div flex="20" ng-if="case.last_name" flex style="background-color:#DFE5E5;border: solid black 1px; padding: 8px;color: black; font-weight: bold; margin: 10px;border-radius: 5px;" layout="column" >
+                <h3>Contact</h3>
+                <label style="display: block; border-bottom: 2px black solid;">Contact</label>
+                <input type="text" ng-model="case.contact_poa" ng-blur="updcasedata('contact_poa', case.contact_poa, case.resident_id)">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Contact Address</label>
+                <input type="text" ng-model="case.contact_address"  ng-blur="updcasedata('contact_address', case.contact_address, case.resident_id)" >
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">City State Zip</label>
+                <input type="text" ng-model="case.contact_csz" ng-blur="updcasedata('contact_csz', case.contact_csz, case.resident_id)">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Telephone</label>
+                <input type="text" ng-model="case.contact_phone" ng-blur="updcasedata('contact_phone', case.contact_phone, case.resident_id)" >
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Email</label>
+                <input type="text" ng-model="case.contact_email"  ng-blur="updcasedata('contact_email', case.contact_email, case.resident_id)">
+
+                <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Relationship</label>
+                <input type="text" ng-model="case.contact_relation"  ng-blur="updcasedata('contact_relation', case.contact_relation, case.resident_id)">
+          </div>
+
+
+<!-- SNF DATA -->
+
+        <div flex="20" ng-if="case.last_name" flex style="background-color:#DFE5E5;border: solid black 1px; padding: 8px; color: black; font-weight: bold; margin: 10px; border-radius: 5px;" layout="column">
+        <div layout="column">      
+        <h3>SNF Data</h3>
+         <label style="display: block; border-bottom: 2px black solid;">SNF</label>
+           <select ng-options="sn.name for sn in scrsnfs" style="height: 29px;" ng-model="selectedsnf" ng-change="updcasedata('snfname', selectedsnf.name, case.resident_id)"></select>
+
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Caseworker</label>
+        <select ng-options="c.initials for c in cws" ng-model="selectedcw" style="height: 29px;"  ng-change="updcasedata('caseworker', selectedcw.initials, case.resident_id)" style="width: 80px;"></select>
+
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">CAO Caseworker</label>
+        <input type="text" ng-model="case.caseworker_cao" ng-change="updcasedata('caseworker_cao', case.caseworker_cao, case.resident_id)">
+
+
+         <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">MA Need Date</label>
+        <input type="date" ng-model="case.date_maneed"  ng-blur="updcasedata('date_maneed', case.date_maneed, case.resident_id)">
+    </div>
+
+        <div layout="column">
+        <label style="display: block; border-bottom: 2px black solid;font-weight: bolder;margin-top: 20px; ">Admission Date
+                  <span ng-if="case.admit_date > 1" style=" font-size: 14px; text-align: right;line-height: 28px;font-weight: bolder; color: dark#5784D7;">  [{{mdadmit}} days] </span></label>
+
+          <input type="date" ng-model="case.admit_date" ng-blur="updcasedata('admit_date', case.admit_date, case.resident_id)">
+
+          <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Admission Notes</label>
+          <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_admit" ng-blur="updcasedata('notes_admit', case.notes_admit, case.resident_id)"></textarea>      
+
+
+       <div layout="column">
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">SNF ID No.</label>
+        <input type="text" ng-model="case.snf_no"  ng-change="updcasedata('snf_no', case.snf_no, case.resident_id)">
+      </div>
+
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;">Problem Case?</label>
+          <div style="display: block;margin-bottom: 15px;">
+          <md-radio-group ng-model="case.problem" layout="row">
+          <md-radio-button name="problem" value="No" ng-model="case.problem" ng-click="updcasedata('problem', 'No', case.resident_id)"> No</md-radio-button>
+          <md-radio-button name="problem" value="Yes" ng-model="case.problem"  ng-click="updcasedata('problem', 'Yes', case.resident_id)"> Yes</md-radio-button>
+        </md-radio-group>
+        </div>
+
+
+        <div style="display: block;">
+        <label style="display: block; border-bottom: 2px black solid;font-weight: bolder;">Date Assigned  <span ng-if="case.admit_date > 1" style=" font-size: 14px; text-align: right;line-height: 28px;font-weight: bolder; color: dark#5784D7;">  [{{mdadss}} days] </span></label>
+        <div layout="row">
+        <div flex> 
+          <input type="date" ng-model="case.date_assigned" ng-blur="updlevels('date_assigned', case.date_assigned, case.resident_id)">
+        </div>
+
+        </div>
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Assignment Notes</label>
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_assigned" ng-blur="updcasedata('notes_assigned', case.notes_assigned, case.resident_id)"></textarea>
+        </div>
+
+        </div>
+     </div>
+
+<!--CASE NOTES -->
+
+      <div layout="column" flex="25" >
+         <div style="background-color:#bf8040;border: solid black 1px; padding: 4px;color: black; font-weight: bold;border-radius: 5px; margin: 10px;" >
+              <h3 align="center">Case Notes</h3>
+              <textarea ng-model="case.casenotes"  ng-blur="updcasedata('casenotes', case.casenotes, case.resident_id)" style="width:98%; font-size: 12px; min-height:100px;"></textarea>
+             </div>
+                <div style="background-color:#bf8040;border: solid black 1px; padding: 4px;color: black; font-weight: bold; border-radius: 5px; margin: 10px;" >
+                <h3 align="center">Issues</h3>
+                <textarea ng-model="case.issues" style="width:98%; font-size: 12px; min-height:100px;" ng-blur="updcasedata('issues', case.issues, case.resident_id)"></textarea>
+                </div>
+
+                <div style="background-color:#bf8040;border: solid black 1px; padding: 4px;color: black; font-weight: bold;border-radius: 5px; margin: 10px; " >
+                <h3 align="center">Plan</h3>
+                <textarea ng-model="case.plan" style="width:98%; font-size: 12px; min-height:100px;" ng-blur="updcasedata('plan', case.plan, case.resident_id)"></textarea>
+              </div>         
+              <div style="background-color:#DFE5E5;border: solid black 1px; padding: 4px;color: black; font-weight: bold; border-radius: 5px; margin: 10px;" >
+                <h3 align="center">Mark Case Closed?</h3>
+                <textarea ng-model="case.closednotes" placeholder="Enter Closing Notes" style="width:95%; font-size: 12px; min-height:100px; margin-bottom: 10px;" ng-blur="updcasedata('closednotes', case.closednotes, case.resident_id)"></textarea>
+                <md-radio-group ng-model="case.closed" ng-change="updclosed('closed', case.closed)" ng-disabled="case.closednotes.length < 5" layout="row">
+                <md-radio-button value="Yes" ng-model="case.closed"  ng-click="updclosed('closed', 'Yes')" name="cn">Yes</md-radio-button>
+                <md-radio-button value="No" ng-model="case.closed"   ng-click="updclosed('closed', 'No')" name="cn" >No</md-radio-button>
+              </md-radio-group>
+            </div> 
+  </div>
+</md-tab>
+
+
+
+<!-- END OF FIRST 4 COLUMNS IN A CASE -->
+
+
+
+
+
+<!-- SECOND TAB STATUS -->
+<!-- COLUMN 1 Application Filed-->
+
+<md-tab label="Status" ng-if="case.last_name">
+  <div style="margin-top: 45px;" layout="row">
+    <div flex="25">
+
+      <div layout="column" style="background-color: #5784D7; height: 300px; border: black solid 1px; border-radius: 5px; margin: 10px;">
+        <div style="display: block; color: #F5FFA5; text-align: center; font-weight: bolder;margin: 10px auto;">
+          Application Filed <span ng-if="mdapp > -1"> - [{{mdapp}} days ]</span>
+        </div>
+        <div style="display: block; margin-top: 10px;color: #F5FFA5; text-align: center; font-weight: bolder;">
+          <input ng-model="case.date_appfiled" type="date" ng-blur="updlevels('date_appfiled', case.date_appfiled, case.resident_id)">
+        </div>
+        <div style="display: block; margin-top: 20px;">
+          <textarea  style="width:90%; font-size: 12px; min-height:150px; margin-left: 5%;" ng-model="case.notes_appfiled" ng-blur="updcasedata('notes_appfiled', case.notes_appfiled, case.resident_id)" placeholder="{{mdadmit}} days since Case Assignment"></textarea>  
+        </div>
+      </div>
+    <!--Second Row-->
+      <div layout="column" style="background-color: lightblue; height: 300px; border: black solid 1px; border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Rejected'"> 
+        <div style="display: block; color: black; text-align: center; font-weight: bolder;margin: 10px auto;">
+          Date of Appeal<span ng-if="case.date_appealled"> - [{{mdappeal}} days]</span>
+        </div>
+        <div style="display: block; margin-top: 10px;color: #F5FFA5; text-align: center; font-weight: bolder;">
+          <input ng-model="case.date_appealled" type="date" ng-blur="updlevels('date_appealled', case.date_appealled, case.resident_id)">
+        </div>
+        <div style="display: block; margin-top: 20px;">
+          <textarea  style="width:90%; font-size: 12px; min-height:150px; margin-left: 5%;" ng-model="case.notes_appeal" ng-blur="updcasedata('notes_appeal', case.notes_appeal, case.resident_id)" placeholder="Basis for Appeal"></textarea>  
+        </div>
+      </div>
+
+
+
+  </div>
+
+
+<!-- END OF COLUMN 1 -->
+
+
+
+
+
+<!-- COLUMN 2 -->
+
+
+    <div flex="25" >  
+      <div layout="column" style="background-color: #5784D7; height: 300px; border: black solid 1px;  border-radius: 5px; margin: 10px;" ng-class="{'statusNotReady': case.status_level < 2}">
+        <div  style="display: block; color: #F5FFA5; text-align: center; font-weight: bolder;margin: 10px auto;">
+          Pending Ltr. Rec'd  <span ng-if="mdpend > 0"> [{{mdpend}} days ]</span>
+        </div>
+        <div style="display: block; margin-top: 10px;color: #F5FFA5; text-align: center; font-weight: bolder;">
+          <input ng-model="case.date_pending" type="date" ng-disabled="case.status_level < 2" ng-blur="updlevels('date_pending', case.date_pending, case.resident_id)">
+        </div>
+        <div style="display: block; margin-top: 10px;">
+        <textarea  style="width:90%; font-size: 12px; min-height:150px; margin-left: 5%;margin-top: 10px;" ng-model="case.notes_pending" ng-blur="updcasedata('notes_pending', case.notes_pending, case.resident_id)" ng-disabled="case.status_level < 2" placeholder="Notes from Pending Letter"></textarea>  
+        </div>    
+      </div>
+
+<!-- COLUMN 2 SECOND ROW -->
+
+    <div layout="column" style="background-color: lightblue; height: 300px; border: black solid 1px;border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Rejected'"> 
+       <div style="display: block; color: black; text-align: center; font-weight: bolder;margin: 10px auto;">
+         Date of Hearing <span ng-if="mdhearing > 0">[{{mdhearing}} days]</span>
+
+        </div>
+        <div style="display: block; margin-top: 10px;color: black; text-align: center; font-weight: bolder;">
+          <input ng-model="case.date_hearing" type="date" style="margin-bottom: 10px;" ng-blur="updcasedata('date_hearing', case.date_hearing, case.resident_id)">
+    <md-divider></md-divider>
+        <label style="display: block; margin-top: 20px; font-weight: bolder;">Our Response Due</label>
+        <input type="date" ng-model="case.date_ourresponse" ng-blur="updcasedata('date_ourresponse', case.date_ourresponse, case.resident_id)"> 
+
+        <label style="display: block; margin-top: 20px; font-weight: bolder;">CAO Response Due</label>
+        <input type="date" ng-model="case.date_caoresponse" ng-blur="updcasedata('date_caoresponse', case.date_caoresponse, case.resident_id)"> 
+        </div>
+      </div>
+  </div>
+
+<!-- COLUMN 3 ROW 1-->
+
+    <div flex="25"  >  
+      <div layout="column" style="background-color: #5784D7; height: 300px; border: black solid 1px;  border-radius: 5px; margin: 10px;" ng-class="{'statusNotReady': case.status_level < 3}">
+        <div  style="display: block;color: #F5FFA5; text-align: center; font-weight: bolder;margin: 10px auto;" ng-disabled="case.status_level < 3">
+          Initial Determination
+        </div>
+        <div  style="display: block;background-color: white; color: black; text-align: left; font-weight: bolder;margin: 10px auto; padding: 10px;" ng-disabled="mdinit == 0">
+
+        <md-radio-group ng-model="case.apprej" ng-change="updlevels('apprej', case.apprej, case.resident_id)" >
+          <md-radio-button value="Rejected" ng-model="case.apprej"  name="ar">Rejected</md-radio-button>
+          <md-radio-button value="Approved" ng-model="case.apprej"  name="ar">Approved</md-radio-button>
+          <md-radio-button value="Penalty" ng-model="case.apprej"   name="ar">Approved with Penalty</md-radio-button>
+          <md-radio-button value="Withdrawn" ng-model="case.apprej"  name="ar">Withdrawn</md-radio-button>      
+          <md-button ng-click="clearapprej()" >Clear</md-button>                
+        </md-radio-group>
+
+        </div>
+
+      </div>
+
+  
+
+
+<!-- COLUMN 3 SECOND ROW -->
+      <div layout="column" style="background-color: lightblue; height: 300px; border: black solid 1px;border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Rejected'"> 
+        <div  style="display: block; color: black; text-align: center; font-weight: bolder;margin: 10px auto;">
+          Hearing Results
+        </div>
+      <div style="display: block; margin-top: 10px;">
+        <textarea  style="width:90%; font-size: 12px; min-height:200px; margin-left: 5%;" ng-model="case.notes_hearing" ng-blur="updcasedata('notes_hearing', case.notes_hearing, case.resident_id)" placeholder="Hearing Notes"></textarea>  
+      </div>
+    </div>
+  </div>
+
+
+<!-- COLUMN 4 ROW 1-->
+
+  <div flex="25" >  
+<!--ENTER APPREJWITHHERE -->
+      <div layout="column"  style="background-color: #cc0000; padding: 10px; height: 300px; border: black solid 1px; border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Rejected'">
+        <div  style="display: block;color: #F5FFA5; text-align: center; font-weight: bolder;margin: 10px auto;" >
+          Rejection Date
+        </div>
+          <div style="display: block; margin-top: 10px; margin-bottom: 10px; color: #F5FFA5; text-align: center; font-weight: bolder;">
+            <input type="date" ng-model="case.date_rejected" ng-blur="updlevels('date_rejected', case.date_rejected, case.resident_id)"> 
+          </div>
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_rejected" ng-blur="updcasedata('notes_rejected', case.notes_rejected, case.resident_id)" placeholder="Rejection Reason"></textarea>
+        <div  style="display: block; text-align: center; font-wieght: bold; background-color: black; padding: 5px; color: white;" ng-if="case.apprej == 'Rejected'">
+          Last Day to Appeal: <br /> {{mdappealdeadline | date : 'fullDate'}}
+        </div>
+      </div>
+
+
+    <!--If Case is Approved -->
+      <div layout="column"  style="background-color: #009933; padding: 10px; height: 300px; border: black solid 1px;border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Approved'">
+        <div layout="row" style="margin-top: 10px; margin-bottom: 10px;">
+          <label flex="50" style="margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;color: #F5FFA5;">Approval Date</label>
+          <label flex="50" style="margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;color: #F5FFA5;">Eligible Date</label>
+        </div>
+        <div layout="row" style="margin-bottom: 20px;">
+          <input type="date" ng-model="case.approved_date" ng-blur="updcasedata('approved_date', case.approved_date, case.resident_id)"> 
+          <input type="date" ng-model="case.eligible_date" ng-blur="updcasedata('eligible_date', case.eligible_date, case.resident_id)"> 
+        </div>
+        <label style="color: #F5FFA5;">Diff. Eligible and MA Need: {{mdeligdiff}} days.</label>
+                   <textarea  style="width:100%;font-size: 12px; min-height:100px; margin-top: 10px;" ng-model="case.notes_approved" ng-blur="updcasedata('notes_approved', case.notes_approved, case.resident_id)" placeholder="Approval Notes"></textarea>
+      </div>
+
+    <!--End - If Case is Withdrawn-->
+
+
+      <div layout="column"  style="background-color: #5784D7; height: 300px; border: black solid 1px; border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Withdrawn'">
+          <div  style="display: block; color: #F5FFA5; text-align: center; font-weight: bolder;margin: 10px auto;">
+            Withdrawal Date
+          </div>
+          <div style="display: block; margin-top: 10px;color: #F5FFA5; text-align: center; font-weight: bolder;margin-bottom: 20px;">
+            <input type="date" ng-model="case.date_withdrawn" ng-blur="updlevels('date_withdrawn', case.date_withdrawn, case.resident_id)"> 
+          </div>
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_withdrawn" ng-blur="updcasedata('notes_withdrawn', case.notes_withdrawn, case.resident_id)" placeholder="Withdrawal Reason"></textarea>
+      </div>
+
+
+    <!--If Penalty-->
+     <div layout="column"  style="background-color: #ff9900; padding: 10px; height: 300px; border: black solid 1px; border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Penalty'">
+      <div layout="column">
+        <label flex style="margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Penalty Days</label>
+        <input type="number" ng-model="case.penaltydays" ng-blur="updcasedata('penaltydays', case.penaltydays, case.resident_id)" ng-change="calcpendays()">
+        <label flex style="margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Penalty Start Date</label>
+        <input type="date" ng-model="case.date_penalty_start" ng-blur="updcasedata('date_penalty_start', case.date_penalty_start, case.resident_id)" > 
+        <label flex style="margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Penalty End Date   </label>
+        <input type="date" ng-model="case.date_penalty_end" ng-blur="updcasedata('date_penalty_end', case.date_penalty_end, case.resident_id)"> 
+      </div>
+       
+
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_penalty" ng-blur="updcasedata('notes_penalty', case.notes_penalty, case.resident_id)" placeholder="Penalty Notes"></textarea>
+      </div>
+
+<!-- COLUMN 4 SECOND ROW-->
+
+    <div layout="column" style="background-color: lightblue; height: 300px; border: black solid 1px;border-radius: 5px; margin: 10px;" ng-if="case.apprej=='Rejected'"> 
+      <div  style="display: block;color: black; text-align: center; font-weight: bolder;margin: 10px auto;" ng-disabled="case.date_hearing == ''">
+      Final Decision
+      </div>
+        <div  style="display: block; color: black; text-align: center; font-weight: bolder;margin: 10px auto;">
+          <label style="display: block;  border-bottom: 2px black solid;font-weight: bolder;">Date Final Decision</label>
+        </div>
+        <div layout="column">
+        <div  style="display: block; color: black; text-align: center; font-weight: bolder;margin: auto;">
+            <input type="date" ng-model="case.date_appapp" ng-blur="updcasedata('date_appapp',case.date_appapp, case.resident_id)"> 
+        </div>
+           <div  style="display: block; color: black; text-align: center; font-weight: bolder;margin: auto;">
+            <span ng-if="mdappapp > 0" style="display: block; font-size: 14px; text-align: left;line-height: 28px;font-weight: bolder; color: darkblue;">[{{mdappapp}} days ]</span>
+          </div>
+        </div>
+
+          <div flex>
+            <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;text-align: center;" ng-click="clearappapp()">Appeal Decision</label>
+          </div>
+          <div layout="row"  style="background-color: white; color: black; text-align: left; font-weight: bolder;margin: 10px auto; padding: 10px;" >
+                <md-radio-group ng-model="case.appapp" >
+              <md-radio-button value="Approved" ng-model="case.appapp"  ng-click="updcasedata('appapp', 'Approved', case.resident_id)" name="aar">Approved</md-radio-button>
+            <md-radio-button value="Rejected" ng-model="case.appapp"  ng-click="updcasedata('appapp', 'Rejected', case.resident_id)" name="aar">Rejected</md-radio-button>
+          </md-radio-group>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </md-tab>
+
+
+<!-- CASE NAV TAB  ZIP UPDATE -->
+<!--
+    <md-tab label="Zip Update"  ng-if="case.last_name">
+
+    <div style="margin-top: 45px;" layout="row">
+      <div flex="20" style="background-color: #5784D7; border: black solid 1px; border-radius: 5px; margin: 10px;">  
+        <div layout="column">
+        <div style="display: block;background-color: #b3e6ff; padding: 10px; border: black solid 5px;">
+        <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Date App Filed</label>
+           <div layout="column">
+            <div flex> 
+              <input type="date" ng-model="case.date_appfiled" ng-blur="updlevels('date_appfiled', case.date_appfiled, case.resident_id)">
+            </div>
+            <div flex>
+              <span ng-if="case.date_appfiled > 1" style="display: block; font-size: 14px; text-align: left;line-height: 28px;font-weight: bolder; color: darkblue; "> [{{mdapp}} days ]</span>
+            </div>
+          </div>
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">App Filed Notes</label>
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_appfiled" ng-blur="updcasedata('notes_appfiled', case.notes_appfiled, case.resident_id)"></textarea>    
+        </div>
+
+
+
+         <div style="display: block;background-color: #99ddff; padding: 10px; border: black solid 5px; border-radius: 5px; margin: 10px;" >
+          <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Date Pending Letter Received</label>
+         <div layout="column">
+         <div flex> 
+          <input type="date" ng-model="case.date_pending" ng-blur="updlevels('date_pending', case.date_pending,case.resident_id)"> 
+        </div>
+        <div flex>
+          <span ng-if="case.date_pending > 1" style="display: block; font-size: 14px; text-align: leftline-height: 28px;font-weight: bolder; color: darkblue;">[{{mdpend}} days ]</span>
+        </div>
+      </div>
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Pending Notes</label>
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_pending" ng-blur="updcasedata('notes_pending', case.notes_pending, case.resident_id)"></textarea>    
+        </div>
+
+
+    <div style="display: block;background-color: #ffeecc; padding: 10px; border: black solid 5px;" >
+
+      <div layout="column">
+
+
+      <div flex>
+        <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder; text-align: center; border-radius: 5px; margin: 10px;">INIITAL DETERMINATION</label>
+    </div>
+    <div flex>
+        <input type="radio" ng-model="case.apprej" name="case.apprejz" value="Approved" ng-click="updlevels('apprej', 'Approved', case.resident_id)" name="apprej">Approved
+        <input type="radio" ng-model="case.apprej" name="case.apprejz" value="Rejected" ng-click="updlevels('apprej', 'Rejected', case.resident_id)" name="apprej">Rejected
+
+        </div>
+        <div flex>
+            <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Date Initial Determination</label>
+          </div>
+        <div flex> 
+          <input type="date" ng-model="case.date_initdetermine" ng-blur="updlevels('date_initdetermine',case.date_initdetermine, case.resident_id)"> 
+        </div>
+        <div flex>
+          <span ng-if="case.date_initdetermine > 1" style="display: block; font-size: 14px; text-align: left;line-height: 28px;font-weight: bolder; color: darkblue;">[{{mdinit}} days ]</span>
+        </div>
+
+      </div>
+    </div>
+        <div style="display: block;background-color: #99ff99; padding: 10px; border: black solid 5px;" ng-if="case.apprej == 'Approved'">
+          <div layout="column">
+            <div flex> 
+              <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Approval Date</label>
+              <input type="date" ng-model="case.approved_date" ng-blur="updlevels('approved_date', case.approved_date, case.resident_id)"> 
+            </div>
+            <div flex> 
+              <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Eligible Date</label>
+            </div>
+            <div flex>
+              <input type="date" ng-model="case.eligible_date" ng-blur="updcasedata('eligible_date', case.eligible_date, case.resident_id)"> 
+            </div>
+            <div flex>
+              Diff. Eligible and MA Need: {{mdeligdiff}} days.
+            </div>        
+
+            <div flex>
+            <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Approval Notes</label>
+            <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_approved" ng-blur="updcasedata('notes_approved', case.notes_approved, case.resident_id)"></textarea>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div style="display: block;background-color: #ffcccc; padding: 10px; border: black solid 5px; border-radius: 5px; margin: 10px;" ng-if="case.apprej == 'Rejected'">
+      <div layout="column">
+        <div flex> 
+          <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Rejection Date</label>
+        </div>
+        <div flex>
+          <input type="date" ng-model="case.date_rejected" ng-blur="updlevels('date_rejected', case.date_rejected, case.resident_id)">
+        </div >
+        <div flex> 
+          <span ng-if="$scope.case.date_rejected > 1" style="display: block; font-size: 14px; text-align: left;line-height: 28px;font-weight: bolder; color: darkblue;"> DEADLINE TO APPEAL {{mdappealdeadline | date : 'fullDate'}}.<br /> <b>[{{mdappdays}} days to go]</b></span>
+          <span ng-if="mdappeal >0"  style="display: block; font-size: 14px; text-align: left;line-height: 28px;font-weight: bolder; color: darkblue;">Appeal Filed</span>
+      </div>
+
+        <div flex>
+          <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Rejection Notes</label>
+          <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_initdetermine" ng-blur="updcasedata('notes_initdetermine', case.notes_initdetermine, case.resident_id)"></textarea>
+        </div>
+    </div>
+    </div>
+
+
+    <div style="display: block;background-color: #ffcccc; padding: 10px; border: black solid 5px;" ng-if="case.apprej == 'Rejected'">
+      <div layout="column">
+        <div flex>
+            <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Date Appeal Filed</label>
+          </div>
+          <div flex>
+            <input type="date" ng-model="case.date_appealled" ng-blur="updlevels('date_appealled', case.date_appealled, case.resident_id)">
+        </div>
+
+      </div>
+
+        <div flex>
+            <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Appeal Notes</label>        
+      </div>
+      <div flex>
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_appeal" ng-blur="updcasedata('notes_appeal', case.notes_appeal, case.resident_id)"></textarea>
+      </div>
+    </div>
+
+
+
+
+    <div style="display: block;background-color: #ffcccc; padding: 10px; border: black solid 5px; border-radius: 5px; margin: 10px;" ng-if="case.date_appealled > 1">
+      <div layout="column">
+        <div flex>
+            <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Hearing Date</label>
+          </div>
+          <div flex>
+            <input type="date" ng-model="case.date_hearing" ng-blur="updlevels('date_hearing', case.date_hearing, case.resident_id)">
+        </div>
+        <div flex>
+        <span ng-if="$scope.case.date_hearing > 1" style="display: block; font-size: 14px; text-align: left;line-height: 28px;font-weight: bolder; color: darkblue;">[{{mdhearing}} days ]</span>
+        </div>
+      </div>
+      <div layout="column">
+        <div flex>
+            <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Hearing Notes</label>        
+      </div>
+      <div flex>
+        <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_hearing" ng-blur="updcasedata('notes_hearing', case.notes_hearing, case.resident_id)"></textarea>
+      </div>
+    </div>
+    </div>
+
+
+    <div style="display: block;background-color: #80d4ff; padding: 10px; border: black solid 5px;" ng-if="case.date_hearing > 1">
+      <label style="display: block; margin-top: 10px; border-bottom: 2px black solid;font-weight: bolder;">Date Appeal Decision</label>
+      <div layout="column">
+        <div flex> 
+          <input type="date" ng-model="case.date_appapp" ng-blur="updlevels('date_appapp',case.date_appapp, case.resident_id)"> 
+        </div>
+        <div flex>
+          <span ng-if="case.date_initdetermine > 1" style="display: block; font-size: 14px; text-align: left;line-height: 28px;font-weight: bolder; color: darkblue;">[{{mdinit}} days ]</span>
+        </div>
+
+      <div flex>
+        <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Appeal Decision</label>
+    </div>
+    <div flex>
+        <input type="radio" ng-model="case.appapp" value="Approved" ng-click="updcasedata('appapp', 'Approved', case.resident_id)" name="appapp">Approved
+        <input type="radio" ng-model="case.appapp" value="Rejected" ng-click="updcasedata('appapp', 'Rejected', case.resident_id)" name="appapp">Rejected
+        </div>
+      </div>
+    </div>
+        <div style="display: block;background-color: #80d4ff; padding: 10px; border: black solid 5px;" ng-if="case.appapp == 'Approved'">
+          <div layout="column">
+            <div flex> 
+              <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Approval Date</label>
+              <input type="date" ng-model="case.approved_date" ng-blur="updcasedata('approved_date', case.approved_date, case.resident_id)"> 
+            </div>
+            <div flex> 
+              <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Eligible Date</label>
+            </div>
+            <div flex>
+              <input type="date" ng-model="case.eligible_date" ng-blur="updcasedata('eligible_date', case.eligible_date, case.resident_id)"> 
+            </div>
+            <div flex>
+              Diff. Eligible and MA Need: {{mdappappeligdiff}} days.
+            </div>        
+
+            <div flex>
+            <label style="display: block; margin-top: 20px; border-bottom: 2px black solid;font-weight: bolder;">Appeal Approval Notes</label>
+            <textarea  style="width:100%;font-size: 12px; min-height:100px;" ng-model="case.notes_appapp" ng-blur="updcasedata('notes_appapp', case.notes_appapp, case.resident_id)"></textarea>
+          </div>
+        </div>
+      </div>
+
+
+        </div>
+      </div>
+
+      <div flex="25" style="background-color: #5784D7;border: black solid 1px;">  
+        <div layout="column">
+          <md-list>
+              <md-list-item>
+                <h3>Internal Notes</h3>
+              </md-list-item>
+              <md-list-item>
+                <textarea  style="width:100%; font-size: 12px; min-height:100px; background-color: wheat; margin-bottom: 10px; color: black;" ng-model="case.noteadd" ng-blur="addanote()" placeholder="Add a Note"></textarea>
+              </md-list-item>
+              <md-list-item ng-repeat="act in actions track by $index" style="margin-bottom: 10px;  overflow: hidden color: black;">
+                <textarea ng-model="act.Action_taken" ng-blur="editnote(act.id, act.Action_taken)"  style="width:100%;font-size: 12px; min-height:100px;"></textarea>
+                <md-divider ></md-divider>
+              </md-list-item>
+          </md-list>
+        </div>
+      </div>
+  </div>  
+</md-tab>
+-->
+<!-- CASE NAV TAB UPLOADS -->
+
+<md-tab label="Uploads"  ng-if="case.last_name" ng-click="getuploads()">
+
+<div style="padding: 20px; margin: 10px; border: black solid 2px;">
+    <h1 align="center">FILE ACCESS CENTER FOR {{case.first_name | uppercase}} {{case.last_name | uppercase}}</h1>
+  <div class="file-upload">
+    <div style="width: 300px;">
+      <div layout="column">
+        <div flex>
+          <input type="file" file-model="case.myFile" role="button3" class="md-raised md-primary"/>
+        </div>
+        <div flex style="border: black solid 4px; padding: 5px;" ng-if="case.myFile">
+          <md-select ng-model="case.dtype" placeholder="Category"  >
+            <md-option ng-value="dtyp" ng-repeat="dtyp in dtypes">{{ dtyp }}</md-option>
+          </md-select>
+        </div>
+        <div flex ng-if="case.myFile" >
+          <label>Comments</label>
+        </div>
+        <div flex ng-if="case.myFile">
+          <input type="text" name="case.comments" ng-model="case.comments" style="width:300px;">
+        </div>
+        <div ng-if="case.myFile">
+          <md-button ng-click="uploadFile()"  class="md-raised md-primary" ng-disabled="!case.dtype">UPLOAD</md-button>
+        </div>
+    </div>
+
+    </div>
+
+  
+
+
+  <div layout="row" style="text-align: center; ">
+    <div  flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkblue;">
+      <div  style="background-color: darkblue; color: yellow; padding: 10px; ">
+        <h3> Application</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in appdocs" class="md-offset">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>
+      </div>
+    </div>
+
+   <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkblue;">
+      <div style="background-color: darkblue; color: yellow; padding: 10px; ">
+        <h3>Med. Ins.</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in medinsdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>     
+      </div>
+    </div>
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkblue;">
+      <div style="background-color: darkblue; color: yellow; padding: 10px; ">
+        <h3>Cards</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in cardsdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>
+      </div>
+    </div>
+
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkblue;">
+      <div style="background-color: darkblue; color: yellow; padding: 10px; ">
+        <h3>Income</h3>
+        <md-content>
+          <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in incomedocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>
+        </md-content>         
+      </div>
+    </div>
+
+
+   <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkblue;">
+      <div style="background-color: darkblue; color: yellow; padding: 10px; ">
+        <h3>IBR</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in ibrdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>     
+      </div>
+    </div>
+
+  </div>
+
+
+  <div layout="row" style="text-align: center; ">
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkgreen;">
+      <div style="background-color: darkgreen; color: yellow; padding: 10px; ">      
+        <h3>Banks</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in banksdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>      
+      </div>      
+    </div>
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkgreen;">
+      <div style="background-color: darkgreen; color: yellow; padding: 10px; ">      
+          <h3>Investments</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in investmentsdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>                
+      </div>          
+    </div>
+
+    
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkgreen;">
+      <div style="background-color: darkgreen; color: yellow; padding: 10px; ">      
+        <h3>Life Ins.</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in lifeinsdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content> 
+      </div>
+    </div>
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkgreen;">
+      <div style="background-color: darkgreen; color: yellow; padding: 10px; ">      
+        <h3>Vehicles</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in vehiclesdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content> 
+      </div>
+    </div>
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: darkgreen;">
+      <div style="background-color: darkgreen; color: yellow; padding: 10px; ">      
+        <h3>Real Estate</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in realtydocs" class="md-offset">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content> 
+      </div>
+    </div>
+  </div>
+
+
+  <div layout="row" style="text-align: center; ">
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: #FF2000;">
+      <div style="background-color: #FF2000; color: yellow; padding: 10px; ">      
+        <h3>CAO Docs</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in caodocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>  
+      </div>      
+    </div>
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: #FF2000;">
+      <div style="background-color: #FF2000; color: yellow; padding: 10px; ">      
+          <h3>Shelters</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in sheltersdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>    
+      </div>          
+    </div>
+
+    
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: #FF2000;">
+      <div style="background-color: #FF2000; color: yellow; padding: 10px; ">      
+        <h3>POAs</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in poasdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>
+      </div>
+    </div>
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: #FF2000;">
+      <div style="background-color: #FF2000; color: yellow; padding: 10px; ">      
+        <h3>ZB / SCR Docs</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in zbdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>
+      </div>
+    </div>
+
+    <div flex="20" style="border: solid black 2px; margin: 5px 5px 10px 5px;border-radius: 10px; background-color: #FF2000;">
+      <div style="background-color: #FF2000; color: yellow; padding: 10px; ">      
+        <h3>Other</h3>
+        <md-content>
+          <md-list flex style="background-color: lightblue;">
+              <md-list-item ng-repeat="c in otherdocs">
+               <div class="md-list-item-text" layout="column">
+                  <h4><md-button class="anchortext md-raised" href="data/{{case.resident_id}}/{{c.filename}}" target="_blank" class="md-toolbar-tools">{{c.filename}}</md-button></h4>
+                         <md-tooltip md-direction="bottom">{{c.comments}}</md-tooltip>
+              </div>
+              </md-list-item>
+            </md-list>
+        </md-content>
+      </div>
+    </div>
+  </div>
+  
+ </md-tab>
+
+
+
+
+
+   <md-tab label="Internal Notes"  ng-if="case.last_name">
+      <md-list>
+        <md-list-item>
+          <h3>Internal Notes</h3>
+        </md-list-item>
+
+        <md-list-item>
+          <textarea  style="width:50%; font-size: 12px; min-height:100px; background-color: wheat; margin-bottom: 10px; color: black;" ng-model="case.noteadd" ng-blur="addanote()" placeholder="Add a Note"></textarea>
+        </md-list-item>
+
+        <md-list-item ng-repeat="act in actions track by $index" style="margin-bottom: 10px;  overflow: hidden color: black;">
+          <textarea ng-model="act.Action_taken" ng-blur="editnote(act.id, act.Action_taken)"  style="width:50%;font-size: 12px; min-height:100px;"></textarea>
+        <md-divider ></md-divider>
+        </md-list-item>
+      </md-list>
+  </md-tab>
+
+
+
+
+   <md-tab label="Meetings"  ng-if="case.last_name">
+      <md-list>
+        <md-list-item>
+          <h3>Meetings</h3>
+        </md-list-item>
+
+        <md-list-item>
+          <textarea  style="width:50%; font-size: 12px; min-height:100px; background-color: wheat; margin-bottom: 10px; color: black;" ng-model="case.noteadd" ng-blur="addanote()" placeholder="Add a Note"></textarea>
+        </md-list-item>
+
+        <md-list-item ng-repeat="act in actions track by $index" style="margin-bottom: 10px;  overflow: hidden color: black;">
+          <textarea ng-model="act.Action_taken" ng-blur="editnote(act.id, act.Action_taken)"  style="width:50%;font-size: 12px; min-height:100px;"></textarea>
+        <md-divider ></md-divider>
+        </md-list-item>
+      </md-list>
+  </md-tab>
+
+
+
+
+  </md-tabs>
+    </div>
+

@@ -1,0 +1,178 @@
+  <md-dialog aria-label="{{dcase.first_name}} {{dcase.last_name}}">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h3>{{dcase.first_name}} {{dcase.last_name}}</h3>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon  aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content style="width:900px;  padding: 6px; margin: 10px;">
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Client Data">
+
+    <div layout="row" style="margin-top: 20px;">
+
+      <div flex>
+        <label style="display: block;">First Name</label>
+        <input ng-model="dcase.first_name" style="background-color:wheat; padding: 6px;">
+      </div>
+
+    <div flex>
+      <label style="display: block;">Middle Name</label>
+      <input ng-model="dcase.middle_name" style="background-color:wheat; padding: 6px;">
+    </div>  
+
+    <div flex>
+      <label style="display: block;">Last Name</label>
+      <input ng-model="dcase.last_name" style="background-color:wheat; padding: 6px;">
+    </div>  
+        <div flex>
+      <label style="display: block;">Ext.</label>
+      <select ng-model="dcase.ext" style="background-color:wheat; padding: 6px;"  ng-options="e as e for e in exts"  ></select>
+    </div>  
+</div>
+
+
+<div layout="row" style="margin-top: 20px;">
+    <div flex>
+      <label style="display: block;">SSN</label>
+      <input ng-model="dcase.ssn" style="background-color:wheat; padding: 6px;">
+    </div>  
+
+    <div flex>
+      <label style="display: block;">DOB</label>
+      <input ng-model="dcase.dob" type="date" style="background-color:wheat; padding: 6px;" ng-blur="getage()">
+    </div>  
+
+    <div flex>
+      <label style="display: block;">Age</label>
+      <input ng-model="dcase.res_age" readonly type="number" style="background-color:wheat; padding: 6px;">
+    </div>      
+
+
+</div>
+
+<div layout="row" style="margin-top: 20px;">
+    <div flex>
+      <label style="display: block;">Facility Name</label>
+      <select ng-options="sn.name for sn in scrsnfs" style="height: 29px;background-color: wheat;" ng-model="dcase.facility" ng-change="updcasedata('snfname', dcase.facility.name, case.resident_id)"></select>
+    </div>
+
+    <div flex>
+      <label style="display: block;">Admission Date</label>
+      <input type="date" ng-model="dcase.admit_date" style="background-color:wheat; padding: 6px;">
+    </div>  
+
+    <div flex>
+      <label style="display: block;">Date Assigned</label>
+      <input type="date" ng-model="dcase.date_assigned" style="background-color:wheat; padding: 6px;">
+    </div>  
+
+</div>
+
+<div layout="row" style="margin-top: 20px;">
+
+    <div flex>
+      <label style="display: block;">SCR Case Worker</label>
+      <select ng-options="cw as cw.initials for cw in cws" ng-model="cwsi" style="background-color:wheat; padding: 6px; width: 185px;"></select>
+    </div>
+
+
+
+</div>
+
+
+
+</md-tab>
+
+
+
+    <md-tab label="Plan - Issues">
+
+        <div layout="column" style="margin-top: 20px;">
+
+            <div flex>
+              <label style="display: block;">Case Issues</label>
+                <textarea ng-model="dcase.issues" rows="3" style="background-color:lightblue; width: 90%;color: black;padding: 6px;"></textarea>
+
+          </div>
+          <br />
+           <div flex>
+              <label style="display: block;">Case Plan of Action</label>
+                <textarea ng-model="dcase.plan"  style="background-color:#eee; width: 90%;color: black;padding: 6px;"></textarea>
+
+          </div>
+
+        </div>
+    </md-tab>
+
+
+
+        <md-tab label="Contact">
+          <md-content class="md-padding">
+            <h1 class="md-display-5">Contact Info</h1>
+
+ <div layout="column" style="margin-top: 20px; ">
+    <div layout="row">
+      <div flex>
+        <label style="display: block;">Contact Name</label>
+        <input ng-model="dcase.contact_poa" style="background-color:wheat; padding: 6px; width: 300px;">
+      </div>
+
+      <div flex>
+        <label style="display: block;">Relationship</label>
+        <input ng-model="dcase.contact_relation" type="text" style="background-color:wheat; padding: 6px;  width: 300px;">
+      </div>  
+    </div>
+
+    <div flex>
+      <label style="display: block;">Address</label>
+      <input ng-model="dcase.contact_address" style="background-color:wheat; padding: 6px;  width: 600px;">
+    </div>  
+
+    <div flex>
+      <label style="display: block;">City State, Zip</label>
+      <input ng-model="dcase.contact_csz" style="background-color:wheat; padding: 6px;  width: 600px;">
+    </div>  
+    <div layout="row">
+    <div flex>
+      <label style="display: block;">Contact Telephone</label>
+      <input ng-model="dcase.contact_phone" style="background-color:wheat; padding: 6px;  width: 300px;">
+    </div>  
+
+    <div flex>
+      <label style="display: block;">Contact Email</label>
+      <input ng-model="dcase.contact_email" type="email" style="background-color:wheat; padding: 6px;  width: 300px;">
+    </div>  
+  </div>
+
+    
+</div>
+
+
+          </md-content>
+        </md-tab>
+
+
+
+
+
+  </md-tabs>
+</md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button  md-autofocus ng-click="hide()" class="md-raised md-warn">
+        Cancel
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="saveclientdata()" class="md-raised md-primary">
+        Save
+      </md-button>
+
+    </md-dialog-actions>
+  </form>
+</md-dialog>
